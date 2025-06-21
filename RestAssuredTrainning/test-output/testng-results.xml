@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-20T09:48:27 IST" name="Default suite" finished-at="2025-06-20T09:48:30 IST" duration-ms="3499">
+  <suite started-at="2025-06-20T19:46:37 IST" name="Default suite" finished-at="2025-06-20T19:46:40 IST" duration-ms="3028">
     <groups>
     </groups>
-    <test started-at="2025-06-20T09:48:27 IST" name="Default test" finished-at="2025-06-20T09:48:30 IST" duration-ms="3499">
-      <class name="Day01.HTTPRequests">
-        <test-method signature="createUser()[pri:2, instance:Day01.HTTPRequests@367ffa75]" started-at="2025-06-20T09:48:27 IST" name="createUser" finished-at="2025-06-20T09:48:30 IST" duration-ms="3400" status="PASS">
+    <test started-at="2025-06-20T19:46:37 IST" name="Default test" finished-at="2025-06-20T19:46:40 IST" duration-ms="3028">
+      <class name="Day02.postRequest">
+        <test-method signature="testUsingHashMap()[pri:1, instance:Day02.postRequest@367ffa75]" started-at="2025-06-20T19:46:37 IST" name="testUsingHashMap" finished-at="2025-06-20T19:46:40 IST" duration-ms="2933" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createUser -->
-        <test-method signature="updateUser()[pri:3, instance:Day01.HTTPRequests@367ffa75]" started-at="2025-06-20T09:48:30 IST" name="updateUser" finished-at="2025-06-20T09:48:30 IST" duration-ms="4" status="PASS">
+        </test-method> <!-- testUsingHashMap -->
+        <test-method signature="testDelete()[pri:2, instance:Day02.postRequest@367ffa75]" started-at="2025-06-20T19:46:40 IST" name="testDelete" finished-at="2025-06-20T19:46:40 IST" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- updateUser -->
-      </class> <!-- Day01.HTTPRequests -->
+        </test-method> <!-- testDelete -->
+      </class> <!-- Day02.postRequest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
