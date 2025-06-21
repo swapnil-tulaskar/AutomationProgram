@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-21T19:14:25 IST" name="Default suite" finished-at="2025-06-21T19:14:27 IST" duration-ms="2123">
+  <suite started-at="2025-06-21T19:39:31 IST" name="Default suite" finished-at="2025-06-21T19:39:34 IST" duration-ms="3204">
     <groups>
     </groups>
-    <test started-at="2025-06-21T19:14:25 IST" name="Default test" finished-at="2025-06-21T19:14:27 IST" duration-ms="2123">
-      <class name="Day02.postRequestUsingPOJOclass">
-        <test-method signature="testPostReqUsingPojoclass()[pri:1, instance:Day02.postRequestUsingPOJOclass@ba2f4ec]" started-at="2025-06-21T19:14:25 IST" name="testPostReqUsingPojoclass" finished-at="2025-06-21T19:14:27 IST" duration-ms="2049" status="PASS">
+    <test started-at="2025-06-21T19:39:31 IST" name="Default test" finished-at="2025-06-21T19:39:34 IST" duration-ms="3204">
+      <class name="Day02.postRequestUsingJSONFile">
+        <test-method signature="testPostReqUsingJsonfile()[pri:1, instance:Day02.postRequestUsingJSONFile@1c1bbc4e]" started-at="2025-06-21T19:39:31 IST" name="testPostReqUsingJsonfile" finished-at="2025-06-21T19:39:34 IST" duration-ms="3069" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPostReqUsingPojoclass -->
-        <test-method signature="testdelete()[pri:2, instance:Day02.postRequestUsingPOJOclass@ba2f4ec]" started-at="2025-06-21T19:14:27 IST" name="testdelete" finished-at="2025-06-21T19:14:27 IST" duration-ms="35" status="PASS">
+        </test-method> <!-- testPostReqUsingJsonfile -->
+        <test-method signature="testdelete()[pri:2, instance:Day02.postRequestUsingJSONFile@1c1bbc4e]" started-at="2025-06-21T19:39:34 IST" name="testdelete" finished-at="2025-06-21T19:39:34 IST" duration-ms="40" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testdelete -->
-      </class> <!-- Day02.postRequestUsingPOJOclass -->
+      </class> <!-- Day02.postRequestUsingJSONFile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

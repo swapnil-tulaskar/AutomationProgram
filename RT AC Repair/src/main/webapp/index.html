@@ -71,6 +71,14 @@
       border-bottom: 1px solid #ddd;
       padding-bottom: 10px;
     }
+    .offer-banner {
+      background-color: #ffe082;
+      color: #4e342e;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
     footer {
       background: #0d47a1;
       color: white;
@@ -90,9 +98,12 @@
 <nav>
   <a href="index.html">Home</a>
   <a href="adminloginpage.html">Admin Login</a>
-   <a href="customer.html">Customer Portal</a>
+  <a href="#">Customer Portal</a>
   <a href="#">Contact Us</a>
 </nav>
+
+<!-- ✅ DYNAMIC OFFER BANNER WILL APPEAR HERE -->
+<div id="offerSection" class="offer-banner" style="display: none;"></div>
 
 <section class="hero">
   <h2>Reliable AC Services, Anytime</h2>
@@ -113,6 +124,16 @@
 <footer>
   &copy; 2025 RT AC Repair Shop | All rights reserved.
 </footer>
+
+<script>
+  // ✅ FETCH OFFER FROM LOCALSTORAGE AND DISPLAY
+  const offer = localStorage.getItem('latestOffer');
+  if (offer) {
+    const offerSection = document.getElementById('offerSection');
+    offerSection.textContent = "🔥 Special Offer: " + offer;
+    offerSection.style.display = "block";
+  }
+</script>
 
 </body>
 </html>
