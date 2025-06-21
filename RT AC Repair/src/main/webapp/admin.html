@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - RT AC Repair Shop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f1f8e9;
+    }
+    header, footer {
+      background-color: #00796b;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+    h2 {
+      color: #00796b;
+    }
+    .offer-section {
+      margin: 40px auto;
+      max-width: 500px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .offer-section input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .offer-section button {
+      padding: 10px 20px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .offer-section button:hover {
+      background-color: #004d40;
+    }
+    .success-msg {
+      color: green;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .logout {
+      margin-top: 30px;
+    }
+    .logout button {
+      padding: 10px 20px;
+      background-color: #c62828;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Admin Dashboard</h1>
+  <p>RT AC Repair Shop - Thandi Hava Turant</p>
+</header>
+
+<main>
+  <h2>Welcome, Admin!</h2>
+  <p>Manage services, offers, and customers from here.</p>
+
+  <div class="offer-section">
+    <h3>Upload New Offer</h3>
+    <input type="text" id="offerInput" placeholder="Enter offer message...">
+    <br>
+    <button onclick="uploadOffer()">Upload Offer</button>
+    <div id="successMsg" class="success-msg"></div>
+  </div>
+
+  <div class="logout">
+    <button onclick="logout()">Logout</button>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 RT AC Repair Shop
+</footer>
+
+<script>
+  function uploadOffer() {
+    const offerText = document.getElementById("offerInput").value.trim();
+    const successMsg = document.getElementById("successMsg");
+
+    if (offerText === "") {
+      successMsg.style.color = "red";
+      successMsg.textContent = "Offer cannot be empty!";
+      return;
+    }
+
+    localStorage.setItem("latestOffer", offerText);
+    successMsg.style.color = "green";
+    successMsg.textContent = "Offer uploaded successfully!";
+    document.getElementById("offerInput").value = "";
+  }
+
+  function logout() {
+    window.location.href = "adminloginpage.html"; // redirect to login page
+  }
+</script>
+
+</body>
+</html>

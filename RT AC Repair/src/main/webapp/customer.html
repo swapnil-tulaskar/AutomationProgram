@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Portal - RT AC Repair Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f1f1f1;
+    }
+    header {
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    header p {
+      font-style: italic;
+      font-size: 1.1em;
+    }
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    h2 {
+      text-align: center;
+      color: #0d47a1;
+    }
+    input[type="text"], input[type="password"], input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      background-color: #0d47a1;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #08306b;
+    }
+    .toggle {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .toggle a {
+      color: #0d47a1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .message {
+      color: red;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .back-home {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .back-home a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0d47a1;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>RT AC Repair Shop</h1>
+  <p>“Thandi Hava Turant”</p>
+</header>
+
+<div class="container" id="loginForm">
+  <h2>Customer Login</h2>
+  <input type="text" id="loginEmail" placeholder="Email" required>
+  <input type="password" id="loginPassword" placeholder="Password" required>
+  <button onclick="loginCustomer()">Login</button>
+  <div class="message" id="loginMsg"></div>
+  <div class="toggle">
+    <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up</a></p>
+  </div>
+</div>
+
+<div class="container" id="signupForm" style="display:none;">
+  <h2>Customer Signup</h2>
+  <input type="text" id="signupName" placeholder="Full Name" required>
+  <input type="email" id="signupEmail" placeholder="Email" required>
+  <input type="password" id="signupPassword" placeholder="Password" required>
+  <button onclick="signupCustomer()">Sign Up</button>
+  <div class="message" id="signupMsg"></div>
+  <div class="toggle">
+    <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+  </div>
+</div>
+
+<div class="back-home">
+  <a href="index.html">Back to Home</a>
+</div>
+
+<script>
+  function toggleForms() {
+    const login = document.getElementById('loginForm');
+    const signup = document.getElementById('signupForm');
+    login.style.display = login.style.display === 'none' ? 'block' : 'none';
+    signup.style.display = signup.style.display === 'none' ? 'block' : 'none';
+  }
+
+  function loginCustomer() {
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    // Dummy credentials
+    if (email === "customer@example.com" && password === "pass1234") {
+      document.getElementById('loginMsg').style.color = "green";
+      document.getElementById('loginMsg').innerText = "Login successful!";
+      // Redirect if needed
+    } else {
+      document.getElementById('loginMsg').innerText = "Invalid credentials!";
+    }
+  }
+
+  function signupCustomer() {
+    const name = document.getElementById('signupName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+
+    // Simulate successful signup
+    document.getElementById('signupMsg').style.color = "green";
+    document.getElementById('signupMsg').innerText = `Welcome, ${name}! Signup successful. You can now log in.`;
+
+    // Automatically switch to login
+    setTimeout(() => {
+      toggleForms();
+    }, 2000);
+  }
+</script>
+
+</body>
+</html>

@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Day02.postRequest">
+      <class name="Day02.postRequestUsingPOJOclass">
         <methods>
-          <include name="testUsingHashMap"/>
-          <include name="testDelete"/>
+          <include name="testPostReqUsingPojoclass"/>
         </methods>
-      </class> <!-- Day02.postRequest -->
+      </class> <!-- Day02.postRequestUsingPOJOclass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
