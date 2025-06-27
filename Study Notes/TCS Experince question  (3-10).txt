@@ -1,0 +1,13 @@
+TCS Experince question  (3-10) 
+1 - Tell me about your self 
+2- what is your role and responsibilities in your project 
+3 - in your project where you use automation testing ?
+4- what is static testing and what is dynamic testing? 
+5 - what is the difference between find element and find elements !
+6- what is ci /cd pipeline ! 
+7 - what is  the difference between soap and rest ! 
+8 - what is 500 status code ? 
+9 -  how to handle multiple windows? 
+10 -  what all are challenges you faced during testing ! 
+ 11 - For defect reporting which tool you are using ? 
+12 -  what is severity and what is priority ?

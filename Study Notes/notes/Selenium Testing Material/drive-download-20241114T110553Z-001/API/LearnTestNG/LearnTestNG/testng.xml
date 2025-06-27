@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="LearnTestNG">
+        <classes>
+            <class name="com.thetestingacademy.testng.BasicAnnotations.AllAnnotation">
+                <methods>
+                    <include name="demo2"/>
+                    <include name="demo5"/>
+                </methods>
+            </class>
+            <class name="com.thetestingacademy.testng.TestNGGroups.Groups">
+                <methods>
+                    <include name="sanityRun"/>
+                    <include name="RegRun"/>
+                    <include name="SmokeRun"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
