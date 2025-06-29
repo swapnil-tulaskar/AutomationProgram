@@ -10,8 +10,6 @@ public class chrome_launching {
 	@Test
 	void oc() {
 		driver = new ChromeDriver();
-		driver.get("https://www.gmail.com/");
-		driver.manage().window().maximize();
 	}
 
 }

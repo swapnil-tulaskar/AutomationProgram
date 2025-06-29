@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="open_browser.print_url_tagname">
+      <class name="open_browser.refresh_back_forword">
         <methods>
-          <include name="main"/>
+          <include name="rbf"/>
         </methods>
-      </class> <!-- open_browser.print_url_tagname -->
+      </class> <!-- open_browser.refresh_back_forword -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
