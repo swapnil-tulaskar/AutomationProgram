@@ -12,7 +12,7 @@ public class print_url_tagname {
 	void oc() {
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
-		// get url 
+		// get URL
 		System.out.println("=================================================");
 		String url = driver.getCurrentUrl();
 		System.out.println("URl:-"+ url);

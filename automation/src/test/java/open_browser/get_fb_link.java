@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class FacebookAccount {
+public class get_fb_link {
 	static WebDriver driver;
 	@Test
 	void fb() {

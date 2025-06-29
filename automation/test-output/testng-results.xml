@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-29T22:12:12 IST" name="Default suite" finished-at="2025-06-29T22:12:30 IST" duration-ms="17691">
+  <suite started-at="2025-06-29T22:30:41 IST" name="Default suite" finished-at="2025-06-29T22:30:44 IST" duration-ms="2838">
     <groups>
     </groups>
-    <test started-at="2025-06-29T22:12:12 IST" name="Default test" finished-at="2025-06-29T22:12:30 IST" duration-ms="17691">
-      <class name="open_browser.delete_cookies">
-        <test-method signature="oc()[pri:0, instance:open_browser.delete_cookies@15de0b3c]" started-at="2025-06-29T22:12:12 IST" name="oc" finished-at="2025-06-29T22:12:30 IST" duration-ms="17650" status="PASS">
+    <test started-at="2025-06-29T22:30:41 IST" name="Default test" finished-at="2025-06-29T22:30:44 IST" duration-ms="2838">
+      <class name="open_browser.get_fb_link">
+        <test-method signature="fb()[pri:0, instance:open_browser.get_fb_link@198b6731]" started-at="2025-06-29T22:30:41 IST" name="fb" finished-at="2025-06-29T22:30:44 IST" duration-ms="2792" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- oc -->
-      </class> <!-- open_browser.delete_cookies -->
+        </test-method> <!-- fb -->
+      </class> <!-- open_browser.get_fb_link -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
