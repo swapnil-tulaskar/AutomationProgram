@@ -15,7 +15,13 @@
       <version>4.20.0</version>
     </dependency>
     
-    
+    <dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-devtools-v137</artifactId>
+  <version>4.33.0</version>
+</dependency>
+
+    <!-- SLF4J Simple Logger -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
@@ -69,4 +75,27 @@
       <version>20240303</version>
     </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <!-- Surefire Plugin to auto-pass system properties -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <systemPropertyVariables>
+            <!-- Suppress Selenium WebDriver logs -->
+            <webdriver.chrome.silentOutput>true</webdriver.chrome.silentOutput>
+
+            <!-- Set SLF4J log level to only show errors -->
+            <org.slf4j.simpleLogger.defaultLogLevel>error</org.slf4j.simpleLogger.defaultLogLevel>
+
+            <!-- Disable Java internal HTTP logging -->
+            <jdk.internal.httpclient.debug>false</jdk.internal.httpclient.debug>
+          </systemPropertyVariables>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

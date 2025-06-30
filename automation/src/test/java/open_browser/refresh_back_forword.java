@@ -16,14 +16,17 @@ public class refresh_back_forword {
 		Thread.sleep(2000);
 		driver.navigate().to("https://www.facebook.com/");
 		Thread.sleep(2000);
+		
+//		for backward the page
 		driver.navigate().back();
 		Thread.sleep(2000);
 
-		
+//		for forward the page
 		driver.navigate().forward();
 		Thread.sleep(2000);
 		
-		driver.navigate().refresh();
+//		for refresh the page
+		driver.navigate().refresh();  
 		
 		Thread.sleep(2000);
 		
