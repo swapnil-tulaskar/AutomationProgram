@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="open_browser.refresh_back_forword">
+      <class name="red_bus.RedbusAutomation">
         <methods>
-          <include name="rbf"/>
+          <include name="open"/>
         </methods>
-      </class> <!-- open_browser.refresh_back_forword -->
+      </class> <!-- red_bus.RedbusAutomation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
