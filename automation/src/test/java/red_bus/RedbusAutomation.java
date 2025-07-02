@@ -68,10 +68,7 @@ public class RedbusAutomation {
         ));
         todayBtn.click();
         System.out.println("3]--. Journey date selected as Today.");
-        
-        driver.findElement(By.xpath("//button[@class=\"primaryButton___469d04 searchButtonWrapper___12ed9c\"]")).click();
-        
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         WebElement buscount = driver.findElement(By.xpath("//span[@class=\"subtitle___ff877e\"]"));
         System.out.println("4]bus found : - "+ buscount.getText());
         System.out.println("all required content print on console");
