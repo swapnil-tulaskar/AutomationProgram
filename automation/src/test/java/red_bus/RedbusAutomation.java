@@ -1,7 +1,6 @@
 package red_bus;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -46,7 +45,7 @@ public class RedbusAutomation {
         Thread.sleep(1000);
         fromInput.sendKeys(Keys.ARROW_DOWN);
         fromInput.sendKeys(Keys.ENTER);
-        System.out.println("City 'Pune' entered.");
+        System.out.println("1]--> City 'Pune' entered.");
 
         // TO City Selection
         WebElement to = wait.until(ExpectedConditions.elementToBeClickable(
@@ -61,14 +60,21 @@ public class RedbusAutomation {
         Thread.sleep(1000);
         toInput.sendKeys(Keys.ARROW_DOWN);
         toInput.sendKeys(Keys.ENTER);
-        System.out.println("City 'Kolhapur' entered.");
+        System.out.println("2]--> City 'Kolhapur' entered.");
 
         // OPTIONAL: Select Date (e.g., Today)
         WebElement todayBtn = wait.until(ExpectedConditions.elementToBeClickable(
             By.xpath("//button[text()='Today']")
         ));
         todayBtn.click();
-        System.out.println("Journey date selected as Today.");
+        System.out.println("3]--. Journey date selected as Today.");
+        
+        driver.findElement(By.xpath("//button[@class=\"primaryButton___469d04 searchButtonWrapper___12ed9c\"]")).click();
+        
+        Thread.sleep(5000);
+        WebElement buscount = driver.findElement(By.xpath("//span[@class=\"subtitle___ff877e\"]"));
+        System.out.println("4]bus found : - "+ buscount.getText());
+        System.out.println("all required content print on console");
       
         driver.quit();
         System.out.println("Browser closed.");
