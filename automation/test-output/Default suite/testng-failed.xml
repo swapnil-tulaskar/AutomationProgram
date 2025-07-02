@@ -5,7 +5,8 @@
     <classes>
       <class name="red_bus.RedbusAutomation">
         <methods>
-          <include name="open"/>
+          <include name="setup"/>
+          <include name="searchBuses"/>
         </methods>
       </class> <!-- red_bus.RedbusAutomation -->
     </classes>

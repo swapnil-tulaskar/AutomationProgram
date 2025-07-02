@@ -1,29 +1,76 @@
 package red_bus;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 import java.time.Duration;
 
 public class RedbusAutomation {
-	
-		WebDriver driver;
 
-	
-		@Test
-		void open() throws InterruptedException {
-       
-		driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    WebDriver driver;
+    WebDriverWait wait;
 
-        // Step 2: Open RedBus site
-        driver.get("https://www.redbus.in");
-        
-//        enter frist city name 
-        driver.findElement(By.xpath("(//div[@class=\"srcDest___66dcbc\"])[1]")).sendKeys("goa");
+    @BeforeClass
+    public void setup() {
+        System.out.println("Launching browser...");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--start-maximized");
+        driver = new ChromeDriver(options);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        driver.get("https://www.redbus.in/");
+        System.out.println("Page loaded.");
+    }
 
-        Thread.sleep(3000); 
+    @Test
+    public void searchBuses() throws InterruptedException {
+
+        // FROM City Selection
+        WebElement from = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//div[@class='labelCityWrapper___e889bf']/div[text()='From']/ancestor::div[contains(@class,'srcDestWrapper')]")
+        ));
+        from.click();
+
+        WebElement fromInput = wait.until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("//input[contains(@placeholder, 'From') or contains(@class,'input')]")
+        ));
+        fromInput.sendKeys("Pune");
+        Thread.sleep(1000);
+        fromInput.sendKeys(Keys.ARROW_DOWN);
+        fromInput.sendKeys(Keys.ENTER);
+        System.out.println("City 'Pune' entered.");
+
+        // TO City Selection
+        WebElement to = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//div[@class='labelCityWrapper___e889bf']/div[text()='To']/ancestor::div[contains(@class,'srcDestWrapper')]")
+        ));
+        to.click();
+
+        WebElement toInput = wait.until(ExpectedConditions.visibilityOfElementLocated(
+            By.xpath("//input[contains(@placeholder, 'To') or contains(@class,'input')]")
+        ));
+        toInput.sendKeys("Kolhapur");
+        Thread.sleep(1000);
+        toInput.sendKeys(Keys.ARROW_DOWN);
+        toInput.sendKeys(Keys.ENTER);
+        System.out.println("City 'Kolhapur' entered.");
+
+        // OPTIONAL: Select Date (e.g., Today)
+        WebElement todayBtn = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//button[text()='Today']")
+        ));
+        todayBtn.click();
+        System.out.println("Journey date selected as Today.");
+      
         driver.quit();
+        System.out.println("Browser closed.");
     }
 }
