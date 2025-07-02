@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-02T13:54:26 IST" name="Default suite" finished-at="2025-07-02T13:54:44 IST" duration-ms="17825">
+  <suite started-at="2025-07-02T13:57:38 IST" name="Default suite" finished-at="2025-07-02T13:57:49 IST" duration-ms="11013">
     <groups>
     </groups>
-    <test started-at="2025-07-02T13:54:26 IST" name="Default test" finished-at="2025-07-02T13:54:44 IST" duration-ms="17825">
+    <test started-at="2025-07-02T13:57:38 IST" name="Default test" finished-at="2025-07-02T13:57:49 IST" duration-ms="11013">
       <class name="red_bus.RedbusAutomation">
-        <test-method is-config="true" signature="setup()[pri:0, instance:red_bus.RedbusAutomation@c0c2f8d]" started-at="2025-07-02T13:54:26 IST" name="setup" finished-at="2025-07-02T13:54:35 IST" duration-ms="9198" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:red_bus.RedbusAutomation@c0c2f8d]" started-at="2025-07-02T13:57:38 IST" name="setup" finished-at="2025-07-02T13:57:41 IST" duration-ms="3101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchBuses()[pri:0, instance:red_bus.RedbusAutomation@c0c2f8d]" started-at="2025-07-02T13:54:35 IST" name="searchBuses" finished-at="2025-07-02T13:54:44 IST" duration-ms="8554" status="PASS">
+        <test-method signature="searchBuses()[pri:0, instance:red_bus.RedbusAutomation@c0c2f8d]" started-at="2025-07-02T13:57:41 IST" name="searchBuses" finished-at="2025-07-02T13:57:49 IST" duration-ms="7867" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchBuses -->
