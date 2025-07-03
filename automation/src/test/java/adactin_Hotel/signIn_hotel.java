@@ -20,7 +20,11 @@ public class signIn_hotel {
 //		enter the hotel link 
 		driver.get("https://adactinhotelapp.com/");
 //		enter user name 
+<<<<<<< HEAD
 		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Swapniltulaskar");
+=======
+		driver.findElement(By.xpath("//input[@type=\"text\"]")).sendKeys("Swapniltulaskar");
+>>>>>>> f471ed9bc48e13bf7f4268366b2603f1a6afb38c
 //		enter password field 
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Swapnil@123");
 		driver.findElement(By.xpath("//input[@id='login']")).click();
