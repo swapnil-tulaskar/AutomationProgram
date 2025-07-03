@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-03T20:53:07 IST" name="Default suite" finished-at="2025-07-03T20:53:15 IST" duration-ms="7422">
+  <suite started-at="2025-07-03T22:37:22 IST" name="Default suite" finished-at="2025-07-03T22:37:56 IST" duration-ms="33896">
     <groups>
     </groups>
-    <test started-at="2025-07-03T20:53:07 IST" name="Default test" finished-at="2025-07-03T20:53:15 IST" duration-ms="7422">
-      <class name="adactin_Hotel.child_per_room">
-        <test-method is-config="true" signature="start()[pri:0, instance:adactin_Hotel.child_per_room@3a52dba3]" started-at="2025-07-03T20:53:08 IST" name="start" finished-at="2025-07-03T20:53:14 IST" duration-ms="6557" status="PASS">
+    <test started-at="2025-07-03T22:37:22 IST" name="Default test" finished-at="2025-07-03T22:37:56 IST" duration-ms="33896">
+      <class name="adactin_Hotel.hotelbooking">
+        <test-method is-config="true" signature="start()[pri:0, instance:adactin_Hotel.hotelbooking@3a52dba3]" started-at="2025-07-03T22:37:22 IST" name="start" finished-at="2025-07-03T22:37:32 IST" duration-ms="9721" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method signature="childroom()[pri:0, instance:adactin_Hotel.child_per_room@3a52dba3]" started-at="2025-07-03T20:53:14 IST" name="childroom" finished-at="2025-07-03T20:53:15 IST" duration-ms="519" status="PASS">
+        <test-method signature="booking()[pri:0, instance:adactin_Hotel.hotelbooking@3a52dba3]" started-at="2025-07-03T22:37:32 IST" name="booking" finished-at="2025-07-03T22:37:56 IST" duration-ms="23726" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- childroom -->
-        <test-method is-config="true" signature="close()[pri:0, instance:adactin_Hotel.child_per_room@3a52dba3]" started-at="2025-07-03T20:53:15 IST" name="close" finished-at="2025-07-03T20:53:15 IST" duration-ms="271" status="PASS">
+        </test-method> <!-- booking -->
+        <test-method is-config="true" signature="close()[pri:0, instance:adactin_Hotel.hotelbooking@3a52dba3]" started-at="2025-07-03T22:37:56 IST" name="close" finished-at="2025-07-03T22:37:56 IST" duration-ms="370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- adactin_Hotel.child_per_room -->
+      </class> <!-- adactin_Hotel.hotelbooking -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

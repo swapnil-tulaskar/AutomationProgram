@@ -20,7 +20,7 @@ public class child_per_room extends signIn_hotel {
 		
 	ch.printAllOptions(chilroom1);
 	ch.selectOption(chilroom1, "3 - Three");
-	System.out.println("dropdown child room 3- three is selected");
+
 		
 		
 	}
@@ -29,7 +29,7 @@ public class child_per_room extends signIn_hotel {
 	
 @AfterMethod
 public void close() throws Throwable {
-	// TODO Auto-generated method stub
+
 	super.close();
 }
 
