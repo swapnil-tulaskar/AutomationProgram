@@ -2,20 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-02T13:57:38 IST" name="Default suite" finished-at="2025-07-02T13:57:49 IST" duration-ms="11013">
+  <suite started-at="2025-07-03T13:42:00 IST" name="Default suite" finished-at="2025-07-03T13:42:05 IST" duration-ms="5026">
     <groups>
     </groups>
-    <test started-at="2025-07-02T13:57:38 IST" name="Default test" finished-at="2025-07-02T13:57:49 IST" duration-ms="11013">
-      <class name="red_bus.RedbusAutomation">
-        <test-method is-config="true" signature="setup()[pri:0, instance:red_bus.RedbusAutomation@c0c2f8d]" started-at="2025-07-02T13:57:38 IST" name="setup" finished-at="2025-07-02T13:57:41 IST" duration-ms="3101" status="PASS">
+    <test started-at="2025-07-03T13:42:00 IST" name="Default test" finished-at="2025-07-03T13:42:05 IST" duration-ms="5026">
+      <class name="adactin_Hotel.adult_per_room">
+        <test-method is-config="true" signature="start()[pri:0, instance:adactin_Hotel.adult_per_room@3a52dba3]" started-at="2025-07-03T13:42:00 IST" name="start" finished-at="2025-07-03T13:42:04 IST" duration-ms="3804" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="searchBuses()[pri:0, instance:red_bus.RedbusAutomation@c0c2f8d]" started-at="2025-07-02T13:57:41 IST" name="searchBuses" finished-at="2025-07-02T13:57:49 IST" duration-ms="7867" status="PASS">
+        </test-method> <!-- start -->
+        <test-method signature="adultroom()[pri:0, instance:adactin_Hotel.adult_per_room@3a52dba3]" started-at="2025-07-03T13:42:04 IST" name="adultroom" finished-at="2025-07-03T13:42:05 IST" duration-ms="945" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchBuses -->
-      </class> <!-- red_bus.RedbusAutomation -->
+        </test-method> <!-- adultroom -->
+        <test-method is-config="true" signature="close()[pri:0, instance:adactin_Hotel.adult_per_room@3a52dba3]" started-at="2025-07-03T13:42:05 IST" name="close" finished-at="2025-07-03T13:42:05 IST" duration-ms="236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- adactin_Hotel.adult_per_room -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
