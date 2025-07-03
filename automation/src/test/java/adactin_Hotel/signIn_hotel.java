@@ -7,8 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.Test;
+
 
 public class signIn_hotel {
 	 
@@ -20,11 +19,9 @@ public class signIn_hotel {
 //		enter the hotel link 
 		driver.get("https://adactinhotelapp.com/");
 //		enter user name 
-<<<<<<< HEAD
+
 		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Swapniltulaskar");
-=======
-		driver.findElement(By.xpath("//input[@type=\"text\"]")).sendKeys("Swapniltulaskar");
->>>>>>> f471ed9bc48e13bf7f4268366b2603f1a6afb38c
+
 //		enter password field 
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Swapnil@123");
 		driver.findElement(By.xpath("//input[@id='login']")).click();

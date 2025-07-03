@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="adactin_Hotel.adult_per_room">
+      <class name="adactin_Hotel.child_per_room">
         <methods>
-          <include name="adultroom"/>
-          <include name="start"/>
+          <include name="childroom"/>
           <include name="close"/>
+          <include name="start"/>
         </methods>
-      </class> <!-- adactin_Hotel.adult_per_room -->
+      </class> <!-- adactin_Hotel.child_per_room -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

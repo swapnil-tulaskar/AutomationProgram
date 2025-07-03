@@ -16,9 +16,12 @@ public class child_per_room extends signIn_hotel {
 	public void childroom() {
 		signIn_hotel ch = new signIn_hotel();
 		
-		By.xpath("//select[@id='child_room']");
+	By chilroom1 =	By.xpath("//select[@id='child_room']");
 		
-		ch.selectOption(, null)
+	ch.printAllOptions(chilroom1);
+	ch.selectOption(chilroom1, "3 - Three");
+	System.out.println("dropdown child room 3- three is selected");
+		
 		
 	}
 	
