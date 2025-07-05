@@ -1,5 +1,9 @@
 package adactin_Hotel;
 
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -94,6 +98,26 @@ public class hotelbooking extends signIn_hotel {
 		System.out.println("Selected: "+ typevalue5);
 		
 		driver.findElement(By.xpath("//input[@id='book_now']")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	
+//		click on my_itinerary button
+		driver.findElement(By.xpath("//input[@id='my_itinerary']")).click();
+//		click on Booked Itinerary
+		
+		List<WebElement> inputs = driver.findElements(By.xpath("//input[@type='radio' or @type='checkbox']"));
+		for (WebElement input : inputs) {
+		    if (!input.isSelected()) {
+		        input.click();
+		        
+		    }
+		}
+		
+		 driver.findElement(By.xpath("//input[@name='cancelall']")).click();
+//	handle the pop up when we click on delete ittinerary 
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.switchTo().alert().accept();
+//		alert accepted;
+			
+			
 		
 		Thread.sleep(10000);
 	}	
