@@ -1,7 +1,6 @@
 /**
  * Test Class: LoginTest
  * Description: To verify valid login
- * 
  * Steps:
  * 1.Launch hotel reservation application using URL as in test data. 
  * 2.Login to the application using username and password as in test data."
