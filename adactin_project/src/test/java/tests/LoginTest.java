@@ -1,3 +1,15 @@
+/**
+ * Test Class: LoginTest
+ * Description: To verify valid login
+ * 
+ * Steps:
+ * 1.Launch hotel reservation application using URL as in test data. 
+ * 2.Login to the application using username and password as in test data."
+
+ * @author Swapnil Tulaskar
+ * @version Build 1.0
+ * @since 2025-07-07
+ */
 package tests;
 
 import base.BaseClass;

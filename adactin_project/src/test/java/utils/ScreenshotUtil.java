@@ -20,9 +20,9 @@ public class ScreenshotUtil {
         dest.getParentFile().mkdirs(); // create folder if not exists
         try {
             Files.copy(src.toPath(), dest.toPath());
-            System.out.println("✅ Screenshot saved: " + dest.getAbsolutePath());
+            System.out.println("Screenshot saved: " + dest.getAbsolutePath());
         } catch (IOException e) {
-            System.out.println("❌ Error while saving screenshot: " + e.getMessage());
+            System.out.println("Error while saving screenshot: " + e.getMessage());
         }
     }
 }
