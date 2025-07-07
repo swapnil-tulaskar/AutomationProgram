@@ -49,10 +49,20 @@ public class InvalidDateTest extends BaseClass {
         search.clickSearch();
 
         // Step 8: Validate error message
+        System.out.println("===============================================================================");
         String actualError = search.getDateErrorMessage();
-        System.out.println("Validation Error Message: " + actualError);
-        String expectedError = "check-in-date should not be later than check-out-date";
-
-        Assert.assertEquals(actualError, expectedError, "Date validation message is incorrect");
+        System.out.println("1) Actual Error Message: " + actualError);
+        String expectedError = " check-in-date should not be later than check-out-date ";
+        System.out.println("2) Expected Error Message: " + expectedError);
+        System.out.println("===============================================================================");
+        
+        if (actualError.trim().equals(expectedError.trim())) {
+            System.out.println("===> Expected result is Fail (Validation caught correctly shown the same) <===");
+        } else {
+            System.out.println("===> Expected result is Pass (Validation NOT shown same as expected ) <===");
+        }  
+        System.out.println("===============================================================================");  
+        
+            Assert.assertEquals(actualError.trim(), expectedError.trim());
     }
 }

@@ -1,6 +1,7 @@
 /**
  * Test Class: LoginTest
  * Description: To verify valid login
+ * 
  * Steps:
  * 1.Launch hotel reservation application using URL as in test data. 
  * 2.Login to the application using username and password as in test data."
@@ -24,7 +25,8 @@ public class LoginTest extends BaseClass {
         login.loginToApp("Swapniltulaskar", "Swapnil@123");
 
         // Validate by page title (you can also use welcome text if available)
-        String expectedTitle = "Adactin.com - Search Hotel"; // After successful login
+        String expectedTitle = "Adactin.com - Search Hotel";// After successful login
+    
         String actualTitle = login.getLoggedInTitle();
 
         Assert.assertEquals(actualTitle, expectedTitle, "Login failed or incorrect page title");
