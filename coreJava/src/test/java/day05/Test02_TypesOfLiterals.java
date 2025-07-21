@@ -77,6 +77,6 @@ class Test02_TypesOfLiterals {
 			System.out.println(int[].class);	//Class literal of type java.lang.Class 
 			System.out.println(Test02_TypesOfLiterals.class);	//Class literal of type java.lang.Class 
 			System.out.println(int.class);		//Class literal of type java.lang.Class 
-			System.out.println(double.class);	//Class literal of type java.lang.Class 
+			System.out.println(double.class);  //Class literal of type java.lang.Class 
 	}
 }
