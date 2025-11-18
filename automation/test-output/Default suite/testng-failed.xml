@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="herokuapp.AddAndRemoveElements">
+      <class name="herokuapp.basicOth">
         <methods>
           <include name="close"/>
-          <include name="test02"/>
           <include name="openChrome"/>
+          <include name="enterUsernamePwd"/>
         </methods>
-      </class> <!-- herokuapp.AddAndRemoveElements -->
+      </class> <!-- herokuapp.basicOth -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

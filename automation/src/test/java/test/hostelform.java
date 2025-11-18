@@ -66,7 +66,8 @@ public class hostelform {
         String[][] areas = {
             {"Andheri", "Bandra", "Dadar", "Powai", "Borivali"},        
             {"Saket", "Karol Bagh", "Lajpat Nagar", "Rohini", "Dwarka"},
-            {"Koregaon Park", "Aundh", "Baner", "Hinjewadi", "Kothrud"},
+            {"Koregaon Pa"
+            		+ "rk", "Aundh", "Baner", "Hinjewadi", "Kothrud"},
             {"Gachibowli", "Madhapur", "Banjara Hills", "Kukatpally", "Begumpet"},
             {"Indiranagar", "Whitefield", "HSR Layout", "Koramangala", "Jayanagar"},
             {"Rajwada", "Vijay Nagar", "Bhawarkuan", "Palasia", "Tilak Nagar"},

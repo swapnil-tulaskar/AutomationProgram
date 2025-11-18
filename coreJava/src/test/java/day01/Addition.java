@@ -2,8 +2,7 @@ package day01;
 
 /**
 This class is used for adding two numbers
-
-@author: HK
+@author: @Swami
 @since: 1.0 
 */
 class Addition {

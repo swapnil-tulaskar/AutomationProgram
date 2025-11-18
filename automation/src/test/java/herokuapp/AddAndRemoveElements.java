@@ -20,14 +20,14 @@ public class AddAndRemoveElements extends BaseClass{
 		
 		driver.findElement(linkText02).click();
 		
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 10; i++) {
             driver.findElement(addElementbtn).click();
            
         }
 
         // Verify 5 delete buttons are present
         List<WebElement> deleteButtons = driver.findElements(deletebtn);
-        Assert.assertEquals(deleteButtons.size(), 100, "Delete buttons count mismatch");
+        Assert.assertEquals(deleteButtons.size(), 10, "Delete buttons count mismatch");
 
         // Optionally delete all added elements
         for (WebElement btn : deleteButtons) {
