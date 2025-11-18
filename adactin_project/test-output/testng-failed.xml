@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.ValidateSelectHotel">
+      <class name="tests.enterPastCheckInDateTest">
         <methods>
-          <include name="checkSelectLocationIsDisplayed"/>
           <include name="quitBrowser"/>
+          <include name="testPastCheckInCheckOutDateValidation"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- tests.ValidateSelectHotel -->
+      </class> <!-- tests.enterPastCheckInDateTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

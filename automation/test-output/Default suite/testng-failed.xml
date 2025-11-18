@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="demoblaze.findnNoOfLinkAndPrint">
+      <class name="adactin_Hotel.hotels">
         <methods>
-          <include name="getLink"/>
+          <include name="close"/>
+          <include name="hotel"/>
+          <include name="openlinks"/>
         </methods>
-      </class> <!-- demoblaze.findnNoOfLinkAndPrint -->
+      </class> <!-- adactin_Hotel.hotels -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

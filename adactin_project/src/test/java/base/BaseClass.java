@@ -1,5 +1,4 @@
 package base;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
@@ -14,9 +13,9 @@ public class BaseClass {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("http://adactinhotelapp.com/");
+        driver.get("https://adactinhotelapp.com/");
     }
-
+    
     @AfterMethod
     public void quitBrowser() {
         if (driver != null) {

@@ -25,7 +25,7 @@ public class LoginTest extends BaseClass {
         login.loginToApp("Swapniltulaskar", "Swapnil@123");
 
         // Validate by page title (you can also use welcome text if available)
-        String expectedTitle = "Adactin.com - Search Hotel";// After successful login
+        String expectedTitle = "Adactin.com - Hotel Reservation System";// After successful login
     
         String actualTitle = login.getLoggedInTitle();
 

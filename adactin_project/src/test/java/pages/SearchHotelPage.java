@@ -4,7 +4,6 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,6 +20,8 @@ public class SearchHotelPage {
     By submitBtn = By.xpath("//input[@id='Submit']");
     By dateError = By.id("checkin_span");  // ✅ actual ID for check-in validation error
     By selectedLocation = By.xpath("//input[@id='location_0']");
+    
+    
     public SearchHotelPage(WebDriver driver) {
         this.driver = driver;
         
@@ -60,7 +61,7 @@ public class SearchHotelPage {
         return driver.findElement(dateError).getText();
     }
     
-    	public String getCityErrorMessage() {
+    public String getCityErrorMessage() {
     	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     	    wait.until(ExpectedConditions.presenceOfElementLocated(selectedLocation)).getAttribute("value");
     	    return driver.findElement(selectedLocation).getAttribute("value");

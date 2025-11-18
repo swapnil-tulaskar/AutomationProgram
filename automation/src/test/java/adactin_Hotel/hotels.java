@@ -49,6 +49,3 @@ public class hotels extends signIn_hotel{
 	}
 	
 }
-	
-
-
