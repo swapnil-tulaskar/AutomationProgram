@@ -1,0 +1,436 @@
+JOINS: (28-08-2024)
+======
+	- In RDBMS data can be stored in multiple tables.From those multiple tables 
+if we want to retrieve the required data / information then we use a technique is 
+known as "JOINS".
+	- Joins are used to retrieving data / information from multiple tables at a time.
+	- Oracle supports the following two types of joins those are,
+		1) NON-ANSI JOINS(oracle8i joins)
+		=============================
+			- Equi join
+			- Non-Equi join
+			- Self join
+
+		2) ANSI JOINS(oracle9I joins)
+		=========================
+			- Inner join
+			- Outer join
+				- Left outer join
+				- Right outer join
+				- Full outer join
+			- Cross join
+			- Natural join
+
+Note:
+=====
+	- ANSI joins are portability joins whereas NON-ANSI joins are not a portability 
+joins.Here portability is nothing but to move a join statement from one platform to 
+another platform without any changes.
+
+syntax for NON-ANSI joins:
+=======================
+SELECT * FROM <TN1>,<TN2> WHERE <joining condition>;
+
+syntax for ANSI joins:
+===================
+SELECT * FROM <TN1> <join key> <TN2> ON <joining condition>;
+
+i) Equi join / Inner join:
+===================
+	- when we are retrieving data from multiple tables based on an " = " operator
+condition is known as equi join / inner join.
+	- when we use equi join we should have at least one commoness colmn in
+both tables.
+	- when we want to join two or more than two table there is no need to have 
+relationship between tables.Here relationship is optional.
+	- it always retrieve matching rows from multiple tables.
+
+syntax for joining condition:
+========================
+NON-ANSI format:
+================
+where <table name1/table alias name1>.<common column name> = <table name2 / table alias name2>.<common column name>;
+
+ANSI format:
+===========
+on <table name1/table alias name1>.<common column name> = <table name2 / table alias name2>.<common column name>;
+
+DEMO_TABLES:
+==============
+SQL> SELECT * FROM COURSE;
+
+       CID CNAME         CFEE
+---------- ---------- 	----------
+         1 ORACLE         3500
+         2 JAVA              5000
+         3 .NET               8000
+
+SQL> SELECT * FROM STUDENT;
+
+      STID SNAME             CID
+---------- ----------                 ----------
+      1021 SMITH               1
+      1022 ALLEN               1
+      1023 WARD                2
+      1024 MILLER
+
+EX:
+waq to retrieve student and the corresponding course details from the tables?
+NON-ANSI:
+SQL> SELECT * FROM STUDENT,COURSE WHERE STUDENT.CID=COURSE.CID;
+			(OR)
+SQL> SELECT * FROM STUDENT S,COURSE C WHERE S.CID=C.CID;
+
+ANSI:
+SQL> SELECT * FROM STUDENT INNER JOIN COURSE ON STUDENT.CID=COURSE.CID;
+			(OR)
+SQL> SELECT * FROM STUDENT S INNER JOIN COURSE C ON S.CID=C.CID;
+
+RULE FOR JOINS:
+===============
+	===================================================
+	|| a row in a table is comparing with all rows of another table ||
+	===================================================
+
+Ex:
+waq to retrieve student and their selected course details from the tables.if the course 
+name is "ORACLE"?
+NON-ANSI
+SQL> SELECT SNAME,CNAME FROM STUDENT S,COURSE C WHERE S.CID=C.CID AND CNAME='ORACLE';
+
+ANSI:
+SQL> SELECT SNAME,CNAME FROM STUDENT S INNER JOIN COURSE C ON S.CID=C.CID AND CNAME='ORACLE';
+			(OR)
+SQL> SELECT SNAME,CNAME FROM STUDENT S INNER JOIN COURSE C ON S.CID=C.CID WHERE CNAME='ORACLE';
+
+Ex:
+waq to display employees who are working under "CHICAGO" location from emp,dept tables?
+NON-ANSI:
+SQL> SELECT ENAME,LOC FROM EMP E,DEPT D
+  2  WHERE E.DEPTNO=D.DEPTNO AND LOC='CHICAGO';
+
+ANSI:
+SQL> SELECT ENAME,LOC FROM EMP E INNER JOIN DEPT D
+  2  ON E.DEPTNO=D.DEPTNO AND LOC='CHICAGO';
+
+Ex:
+waq to display sum of salaries of each department name wise from emp,dept tables?
+NON-ANSI:
+SQL> SELECT DNAME,SUM(SAL) FROM EMP E ,
+  2  DEPT D WHERE E.DEPTNO=D.DEPTNO GROUP BY DNAME;
+
+ANSI:
+SQL> SELECT DNAME,SUM(SAL) FROM EMP E INNER JOIN
+  2  DEPT D ON E.DEPTNO=D.DEPTNO GROUP BY DNAME;
+
+Ex:
+waq to display DEPTNO,sum of salaries of each DNAME wise from emp,dept tables?
+NON-ANSI:
+SQL> SELECT D.DEPTNO,DNAME,SUM(SAL) FROM EMP E ,
+  2  DEPT D WHERE E.DEPTNO=D.DEPTNO GROUP BY D.DEPTNO,DNAME;
+
+ANSI:
+SQL> SELECT D.DEPTNO,DNAME,SUM(SAL) FROM EMP E INNER JOIN
+  2  DEPT D ON E.DEPTNO=D.DEPTNO GROUP BY D.DEPTNO,DNAME;
+
+Ex:
+waq to display sum of salary of department names from emp,dept tables if the sum of
+salary of the department is less than 10000?
+NON-ANSI:
+SQL> SELECT DNAME,SUM(SAL) FROM EMP E ,
+  2  DEPT D WHERE E.DEPTNO=D.DEPTNO GROUP BY DNAME HAVING SUM(SAL)<10000;
+
+ANSI:
+SQL> SELECT DNAME,SUM(SAL) FROM EMP E INNER JOIN
+  2  DEPT D ON E.DEPTNO=D.DEPTNO GROUP BY DNAME HAVING SUM(SAL)<10000;
+
+Ex:
+waq to display no.of employees working under department names from emp,dept tables
+in which department the no.of employees are working more than 3?
+NON-ANSI
+SQL> SELECT DNAME,COUNT(*) FROM EMP E,DEPT D
+  2  WHERE E.DEPTNO=D.DEPTNO GROUP BY DNAME
+  3  HAVING COUNT(*)>3;
+
+ANSI
+SQL> SELECT DNAME,COUNT(*) FROM EMP E INNER JOIN DEPT D
+  2  ON E.DEPTNO=D.DEPTNO GROUP BY DNAME
+  3  HAVING COUNT(*)>3;
+
+29-08-2024:
+==========
+OUTER JOINS:
+============
+	- these are again three types.
+
+i) Left outer join:
+==============
+	- retrieving matching rows from both tables and unmatching rows from the left
+side table only.
+ANSI:
+SQL> SELECT * FROM STUDENT S LEFT OUTER JOIN COURSE C ON S.CID=C.CID;
+
+NON-ANSI:
+=========
+	- when we want to implement outer joins in non-ansi format then we use 
+a join operator is (+).
+
+Ex:
+SQL> SELECT * FROM STUDENT S,COURSE C WHERE S.CID=C.CID(+);
+
+ii) Right outer join:
+==============
+	- retrieving matching rows from both tables and unmatching rows from the right
+side table only.
+ANSI:
+SQL> SELECT * FROM STUDENT S RIGHT OUTER JOIN COURSE C ON S.CID=C.CID;
+
+NON-ANSI:
+SQL> SELECT * FROM STUDENT S,COURSE C WHERE S.CID(+)=C.CID;
+
+iii) Full outer join:
+==============
+	- it is a combination of left outer and right outer join.
+	- by using full outer join we will retrieve matching rows and unmatching rows from 
+the tables at a time.
+ANSI:
+SQL> SELECT * FROM STUDENT S FULL OUTER JOIN COURSE C ON S.CID=C.CID;
+
+NON-ANSI:
+SQL> SELECT * FROM STUDENT S,COURSE C WHERE S.CID=C.CID(+)
+          UNION
+          SELECT * FROM STUDENT S,COURSE C WHERE S.CID(+)=C.CID;
+
+NON-EQUI JOIN:
+==============
+	- retrieving data from multiple table based on any operator condition except an " = "
+operator.
+
+DEMO_TABLES:
+=============
+SQL> SELECT * FROM TEST1;
+
+       SNO NAME
+---------- ----------
+         1 SMITH
+         2 ALLEN
+
+SQL> SELECT * FROM TEST2;
+
+       SNO    SAL
+---------- 	----------
+         1      23000
+         3      34000
+
+EX:
+SQL> SELECT * FROM TEST1 T1,TEST2 T2 WHERE T1.SNO>T2.SNO;
+SQL> SELECT * FROM TEST1 T1,TEST2 T2 WHERE T1.SNO>=T2.SNO;
+SQL> SELECT * FROM TEST1 T1,TEST2 T2 WHERE T1.SNO<T2.SNO;
+SQL> SELECT * FROM TEST1 T1,TEST2 T2 WHERE T1.SNO<=T2.SNO;
+SQL> SELECT * FROM TEST1 T1,TEST2 T2 WHERE T1.SNO!=T2.SNO;
+
+EX:
+waq to display employees whose salary is between low salary and high salary?
+NON-ANSI:
+SQL> SELECT ENAME,SAL,LOSAL,HISAL FROM EMP,SALGRADE
+  2  WHERE SAL BETWEEN LOSAL AND HISAL;
+
+ANSI:
+SQL> SELECT ENAME,SAL,LOSAL,HISAL FROM EMP JOIN SALGRADE
+  2  ON SAL BETWEEN LOSAL AND HISAL;
+
+		(OR)
+NON-ANSI
+SQL> SELECT ENAME,SAL,LOSAL,HISAL FROM EMP,SALGRADE
+  2  WHERE (SAL>=LOSAL) AND (SAL<=HISAL);
+
+ANSI
+SQL> SELECT ENAME,SAL,LOSAL,HISAL FROM EMP JOIN SALGRADE
+  2   ON (SAL>=LOSAL) AND (SAL<=HISAL);
+
+CROSS JOIN:
+===========
+	- joining two or more than two tables without any condition.
+	- in cross join mechanism each row of a table will joins with each row of 
+another table.For example a table is having (m) no.of rows and another table is having(n)
+no.of rows then the result is (mxn) rows.
+
+EX:
+ANSI:
+SQL> SELECT * FROM STUDENT CROSS JOIN COURSE;
+
+NON-ANSI:
+SQL> SELECT * FROM STUDENT,COURSE;
+
+DEMO_TABLES:
+=============
+SQL> SELECT * FROM ITEMS1;
+
+       SNO    INAME           PRICE
+      ---------- ----------              ----------
+         1 PIZZA                   180
+         2 BURGER                85
+
+SQL> SELECT * FROM ITEMS2;
+
+       SNO INAME           PRICE
+      ---------- ----------          ----------
+        11 PEPSI              25
+        12 COCACOLA      20
+
+SQL> SELECT I1.INAME,I1.PRICE,I2.INAME,I2.PRICE,
+  2  I1.PRICE+I2.PRICE AS TOTAL_AMOUNT FROM
+  3  ITEMS1 I1 CROSS JOIN ITEMS2 I2;
+
+NATURAL JOIN:
+=============
+	- retrieving matching rows from multiple tables based on an " = " operator
+with a common column name just like equi join.
+
+	Natural joins			Equi join
+	===========			=========
+1. this join condition is preparing 		1. this join condition is preparing 
+by system implicitly.			by user explicitly.
+
+2. here common column name is 		2. here common column name is 
+    mandatory.				optional.
+
+3. to avoid duplicate columns from		3. it will not avoid duplicate columns
+ the result automatically.			from the result automatically.
+
+Ex:
+SQL> SELECT * FROM STUDENT S NATURAL JOIN COURSE C ;
+
+SELF JOIN:
+=========
+	- joining a table by itself is known as "self join".
+			(or)
+	- comparing a table data by itself is also caled as "self join".
+	- self join can be implemented based on a single table only.
+	- when we use self join we must create alias names on a table otherwise 
+	we cannot implement self join technique.
+	- when we create alias name on a table internally system will prepare a virtual 
+	table on each alias name.
+	- we can create any no.of alias names on a single table but each alias name
+	should be different.
+	- self join can be used in two cases in database.
+		Case-1: Comparing a single column values by itself with in the table.
+		Case-2: Comparing two different columns values to each other with in the table.
+
+Examples on comparing a single column values by itself with in the table:
+=============================================================
+Ex:
+waq to display employees who are working in the same location where the employee
+SMITH is also working?
+
+DEMO_TABLE:
+============
+SQL> SELECT * FROM TEST;
+
+ENAME      LOC
+---------- 	----------
+SMITH       HYD
+ADAMS      MUMBAI
+JONES       CHENNAI
+MILLER      HYD
+MARTIN     DELHI
+
+Solution:
+========
+SQL> SELECT T1.ENAME,T1.LOC FROM TEST T1,TEST T2
+  2  WHERE T1.LOC=T2.LOC AND T2.ENAME='SMITH';
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

@@ -1,0 +1,34 @@
+Does Java support Pass-By-Reference?
+===============================================================================
+Controversary question, because there are different answers for this question
+some blogs say supports and some other blogs say does not support. 
+
+So I refered SunMicrosystems Java tutorials, they said Java supports 
+only Pass-By-Value
+
+In sun microsystems tutorial, I found, 
+	"Even though object is passed as arugment, 
+	 it comes under pass-by-value, because after method complete,
+         the pass-in refenrenced variable still points the same old object. ".  
+ 
+It means, when we pass a primitive value or an object to a method as argument,
+and if we modify them in method parameter by assingning new value or new object, 
+that modification is not effected to the passed-in variable.
+
+   But they mentioned, if we modify object data by using method paramter that modification is effected 
+   to passed in referenced variable, becasue both pass-in referenced variable and parameter are pointing 
+   to same object memory.
+
+Programitically we can conclude three points	 	
+	1. if we pass primitive value as argument, and if we midify it in parameter,
+			that modification is not effected to passed-in variable
+
+	2. if we pass object as argument, and if we midify parameter by assigning new object,
+			that modification is not effected to pass-in referenced variable 
+			it means after method execution completed, the passed-in variable is still refers 
+			the same object that is refering before method call 
+
+	3. if we pass object as argument, and if we modify object data by using parameter,
+			that modification is effected to pass-in referenced variable 
+			it means after method execution completed, the passed-in variable will get 
+			method parameter modified values

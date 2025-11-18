@@ -1,0 +1,10 @@
+Develop a program to show the usage of constructor, setter and getter methods
+to initialize Student object at the time of object creation and after object creation
+
+Create one object with default values and initialize it with setter method
+Create second object with initial values and modify its values by using setter methods
+
+Display values of both objects after object creation and after setter methods call.
+
+You must read values from keyboard for intializing and modifying object
+

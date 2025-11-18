@@ -1,0 +1,456 @@
+OPERATORS IN ORACLE: (13-08-2024)
+====================
+	- to perform some operation on the given operand values.
+	- oracle supports the following operators are,
+		i) Assignment operator	=>	=
+		ii) Arithmetic operators	=>	+ , - , * , /
+		iii) Relational operators	=>	< , > , <= , >= , != (or) < >
+		iv) Logical operators	=>	AND,OR,NOT 
+		v) Set operators		=>	Union,Union all,Intersect,Minus
+		
+		vi) Special operators	=>	(+ve)		(-ve)
+						====		=====
+						IN		NOT IN
+						BETWEEN	NOT BETWEEN
+						IS NULL		IS NOT NULL
+						LIKE 		NOT LIKE
+
+i) Assignment operator:
+=====================
+	- to assign a value to a variable / to a attribute.
+
+syntax:
+======
+	<column name> <assignment operator> <value>
+
+Ex:
+SQL> UPDATE EMP SET SAL=45000;
+SQL> UPDATE EMP SET JOB='HR' WHERE EMPNO=7788;
+
+ii) Arithmetic operators:
+====================
+	- to perform addition,suntraction,multiple and division.
+
+syntax:
+======
+	<column name> <arithmetic operator> <value>
+
+Ex:
+waq to display all employees after adding 1000/-?
+SQL> SELECT ENAME,SAL AS OLD_SALARY,SAL+1000 AS NEW_SALARY FROM EMP;
+
+Ex:
+waq to display EMPNO,ENAME,BASIC SALARY and ANNUAL SALARY of employees 
+from emp table?
+SQL> SELECT EMPNO,ENAME,SAL AS BASIC_SALARY,SAL*12 AS ANNUAL_SALARY FROM EMP;
+
+Ex:
+waq to display ENAME,JOB,BASIC_SALARY,increment of 5% amount and TOTAL SALARY
+of employees who are working as a "MANAGER"?
+SQL> SELECT ENAME,JOB,SAL AS BASIC_SALARY,SAL*5/100 AS INCREMENT_AMOUNT,
+         SAL+SAL*5/100 AS TOTAL_SALARY FROM EMP WHERE JOB='MANAGER';
+
+Ex:
+waq to display EMPNO,ENAME,DEPTNO,BASIC_SALARY,HRA of 10%,DA of 20%,
+PF of 5% and aslo find out GROSS salary of employees who are working under 
+deptno is 20?
+SQL> SELECT EMPNO,ENAME,DEPTNO,SAL AS BASIC_SALARY,
+  2  SAL*0.1 AS HRA,SAL*0.2 AS DA,SAL*0.05 AS PF,
+  3  SAL+SAL*0.1+SAL*0.2+SAL*0.05 AS GROSS_SALARY
+  4  FROM EMP WHERE DEPTNO=20;
+
+Ex:
+waq to display all employees salaries after decrement of 5%?
+SQL> SELECT ENAME,SAL AS BEFORE_DECREMENT,SAL-SAL*5/100 FROM EMP;
+
+14-08-2024:
+===========
+iii) Relational operators:
+====================
+	- comparing a specific column values with user defined condition.
+syntax:
+======
+	where <column name> <relational operator> <value>;
+
+Ex:
+waq to display list of employees who are joined before 1981?
+SQL> SELECT * FROM EMP WHERE HIREDATE<'01-JAN-1981';
+
+
+Ex:
+waq to display list of employees who are joined after 1981?
+SQL> SELECT * FROM EMP WHERE HIREDATE>'31-DEC-1981';
+
+iv) Logical operators:
+==================
+	- comparing more than one condition in the query.
+	- AND , OR , NOT.
+
+AND operator:
+============
+	- it return a value if both conditions are true in the query.
+
+COND1	COND2
+======	=======
+T	T	===> T
+T	F	===> F
+F	T	===> F
+F	F	===> F
+
+syntax:
+=======
+	where <condition1> AND <condition2>
+Ex:
+waq to display employees whose name is "SMITH" and working as a "CLERK" ?
+SQL> SELECT * FROM EMP WHERE ENAME='SMITH' AND JOB='CLERK';
+
+OR operator:
+==========
+	- it return a value if any one condition is true from the given group og 
+conditions in the query.
+
+COND1	COND2
+======	=======
+T	T	===> T
+T	F	===> T
+F	T	===> T
+F	F	===> F
+
+syntax:
+=======
+	where <condition1> OR <condition2>	
+
+EX:
+waq to display employees who are working as "MANAGER","SALESMAN"?
+SQL> SELECT * FROM EMP WHERE JOB='MANAGER' OR JOB='SALESMAN';
+
+NOT operator:
+============
+	- it return all values except the given conditional values.
+
+syntax:
+=======	
+	where NOT <column name>= <value> AND NOT <column name>=<value>
+Ex:
+waq to display employees who are not working under deptno is 10 and 30?
+SQL> SELECT * FROM EMP WHERE NOT DEPTNO=10 AND NOT DEPTNO=30;
+
+v) Set operators:
+==============
+	- are used to combined the results of two select queries.
+syntax:
+======
+	<select query1> <set operator> <select query2>;
+
+EX:
+	A ={10,20,30}	B={30,40,50}
+
+UNION:
+======
+	- to combined two sets of values without duplicates.
+		A U B = {10,20,30,40,50}
+
+UNION ALL:
+==========
+	- to combined two sets of values with duplicates.
+		A UL B = { 10,20,30,30,40,50 }
+
+INTERSECT:
+===========
+	- it return common values from both sets.
+		A I B = { 30 }
+
+MINUS:
+=======
+	- it return uncommon values from left set only.
+		A - B = { 10,20 }
+		B - A = { 40,50 }
+
+DEMO_TABLES:
+=============
+SQL> SELECT * FROM EMP_HYD;
+
+       EID ENAME             SAL
+---------- ---------- ----------
+      1021 SMITH           85000
+      1022 ALLEN           48000
+      1023 JONES           68000
+
+SQL> SELECT * FROM EMP_MUMBAI;
+
+       EID ENAME             SAL
+---------- ---------- ----------
+      1021 SMITH           85000
+      1024 MILLER          55000
+
+EX:
+waq to display all employees details who are working in the organization?
+SQL> SELECT * FROM EMP_HYD
+  2  UNION ALL
+  3  SELECT * FROM EMP_MUMBAI; --------> (including duplicate rows)
+
+SQL> SELECT * FROM EMP_HYD
+  2  UNION 
+  3  SELECT * FROM EMP_MUMBAI; --------> (excluding duplicate rows)
+
+EX:
+waq to display employees who are working in HYD but not in MUMBAI branch?
+SQL> SELECT * FROM EMP_HYD
+  2  MINUS
+  3  SELECT * FROM EMP_MUMBAI;
+
+EX:
+waq to display employees who are working in both branches?
+SQL> SELECT * FROM EMP_HYD
+  2  INTERSECT
+  3  SELECT * FROM EMP_MUMBAI;
+
+BASIC RULES:
+============
+1. no.of columns in both select statements should be same.
+2. order of the columns and their datatypes of columns in both queries must be match.
+
+
+16-08-2024:
+==========
+vi) Special operators:
+===================
+IN operator:
+==========
+	- comparing the list of values based on a single condition.
+syntax:
+======
+	where <column name> IN (v1,v2,v3,.................);
+	where <column name> NOT IN (v1,v2,v3,.................);
+
+Ex:
+waq to display employees who are working as "CLERK","SALESMAN","PRESIDENT"?
+SQL> SELECT * FROM EMP WHERE JOB IN('CLERK','SALESMAN','PRESIDENT');
+
+
+Ex:
+waq to display employees who are not working as "CLERK","SALESMAN","PRESIDENT"?
+SQL> SELECT * FROM EMP WHERE JOB NOT IN('CLERK','SALESMAN','PRESIDENT');
+
+BETWEEN:
+=========
+	- comapring a particular range value.
+syntax:
+======
+	where <column name> BETWEEN <low value> AND <high value>;
+	where <column name> NOT BETWEEN <low value> AND <high value>;
+
+Ex:
+waq to display employees who are joined in 1981?
+SQL> SELECT * FROM EMP WHERE HIREDATE BETWEEN '01-JAN-1981' AND '31-DEC-1981';
+
+Ex:
+waq to display employees who are not joined in 1981?
+SQL> SELECT * FROM EMP WHERE HIREDATE NOT BETWEEN '01-JAN-1981' AND '31-DEC-1981';
+
+IS NULL:
+========
+	- comparing NULLS in a table.
+syntax:
+======
+	where <column name> IS NULL;
+	where <column name> IS NOT NULL;
+
+Ex:
+waq to display employees whose commission is NULL / undefined / empty ?
+SQL> SELECT * FROM EMP WHERE COMM IS NULL;
+
+
+Ex:
+waq to display employees whose commission is not NULL /  is not empty ?
+SQL> SELECT * FROM EMP WHERE COMM IS NOT NULL;
+
+LIKE:
+=====
+	- comparing a specific string character pattern wise.
+	- when we use LIKE operator we must use the following wildcard operators are,
+		i) %	- it represent the remaining group of char's after selected character from 
+			the given string expression.
+		ii) _	- counting a single character from the given string expression.
+
+syntax:
+======
+where <column name> '[<wildcard operator>] <specific character pattern> [<wildcard operator>]';
+
+EX:
+waq to fetch employees whose name starts with "S" character?
+SQL> SELECT * FROM EMP WHERE ENAME LIKE 'S%';
+
+EX:
+waq to fetch employees whose name ends with "R" character?
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '%R';
+
+EX:
+waq to fetch employees whose NAME is having "I" character?
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '%I%';
+
+EX:
+waq to fetch employees whose name starts with "M" and ends with "N"?
+SQL> SELECT * FROM EMP WHERE ENAME LIKE 'M%N';
+
+EX:
+waq to fetch employes whose name is having 4 characters?
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '____';
+
+EX:
+waq to fetch employees whose name is having the second position of character is "O"?
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '_O%';
+
+EX:
+waq to fetch employees whose EMPNO starts with "7" and ends with "8"?
+SQL> SELECT * FROM EMP WHERE EMPNO LIKE '7%8';
+
+EX:
+waq to fetch the list of employees who are joined in 1981?
+SQL> SELECT * FROM EMP WHERE HIREDATE LIKE '%81';
+
+EX:
+waq to fetch the list of employees who are joined in the month of " DECEMBER"?
+SQL> SELECT * FROM EMP WHERE HIREDATE LIKE '%DEC%';
+
+EX:
+waq to fetch the list of employees who are joined in the month of "JUNE"," DECEMBER"?
+
+
+EX:
+waq to fetch the list of employees who are joined in the month of "DECEMBER" in 1982?
+
+
+EX:
+waq to fetch the list of employees who are joined in the month of "JUNE"," DECEMBER" in 1981?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					

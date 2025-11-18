@@ -1,0 +1,178 @@
+Inheritance and types of inheritance
+=======================================
+Q) Identify are below objects' classes creation correct or wrong design
+	class Student {}	wrong design
+
+	class Lion {}		wrong design
+
+	class HDFCBank {}	wrong design
+
+	class Rectangle {}	wrong design
+
+	class Airtel {}		wrong design
+
+becuase all above objects are not main or individual objects
+the above all objects are sub types of other main or individual objects
+so we must create above classes as sub type but not as individual objects 
+//====================================================================
+
+below code shows creating above objects as sub types 
+by developing inheritance by using 'extends and implement' keywords
+	class Person { }
+	class Student extends Person{ }		//correct desing
+
+	interface Animal { }
+	class Lion implements Animal { }	//correct desing
+
+	class Bank { }
+	class HDFCBank extends Bank { }		//correct desing
+
+	interface Shape { }
+	class Rectangle implements Shape { }	//correct desing
+
+	interface Sim { }
+	class Airtel implements Sim { }		//correct desing
+//========================================================================
+
+Q) How many ways we can reusing existing class members in new class?
+A) in 2 ways	
+	1. by using HAS-A relation (Association)
+	2. by using IS-A relation (Inheritance)
+
+	- HAS-A relation means 
+		creating existing class object in new class
+		and accessing members by using the existing class object
+	
+	- IS-A relation	means
+		creating new class deriving from an existing class
+		and accessing existing class members by using this new class object
+
+- Below code explains access Person class members in Student class for Person object
+  with HAS-A relation( Person class members are not executing for Student object)
+
+	class Person {
+		Sting name;
+
+		void eat() {
+			System.out.println(name + " is eating");
+		}
+	}
+//=====================================================================
+
+	class Student {  
+		public static void main(String[] args) {
+		  //=== HAS-A === realation wise reusing
+			Person p1 = new Person();//Student class is reusing
+			p1.name = "Hari";	//Person class and its memebers
+			p1.eat();		//for perform operation for Person
+		}
+	}
+	//with HAS-A relation we are reusing 
+	//Person and its members for Person but not student
+
+	//for using Person members for Student, 
+	//we must develop IS-A realtion(Inheritance)
+
+	//By developing inheritance we are 
+	//'extending and reusing' existing class members
+	//for new class object as if those existing members
+	//available in this new class
+//=====================================================================
+
+	class Student extends Person { //extending Person to use as Student
+
+		public static void main(String[] args) {
+		  //reusing with IS-A relation	
+			Student s1 = new Student();	
+			s1.name = "hari";	//we are accessing and reusing
+			s1.eat();		//existing class Person members
+						//as if those are own members of 
+		}				//Student object 
+	}
+
+
+	//Inheritance is meant for 'extending + resuing'
+//=====================================================================
+
+//Q) Can we store one class object in another class type referenced variable?
+//A) If this object's class is SUB CLASS, we can store
+
+//Identify CE in the below program?
+
+	class Animal { }
+	class Lion { }
+
+	class Test {
+	   public static void main(String[] args) {
+
+		Animal a1 = new Animal();	//allowed, same type
+		Lion   l1 = new Lion();		//allowed, same type
+
+		//Animal a2 = new Lion();	//not allowed, not IS-A relation
+		Person p1 = new Student();	//allowd, Student IS-A Person type
+
+	   }
+	}
+
+//when we develop inheritance, 
+	the new type object/class obtains the existing object/class 
+	  'type, properites and behaviors' and 
+	this new object is considered as
+	existing class object type.
+
+//hence we can stored the sub type object
+	//1. either in its own type referenced variable
+	//2. or     in its super type referenced variable
+
+	Student s1 = new Student(); //same type referenced variable, allowed
+	Person  p1 = new Student(); //super type referenced variable, allowed
+
+//but we can not store Super class object in sub class type variable	
+	Student s2 = new Person(); //not allowed, 
+			//sub type refernced variable with super type object
+
+//concusion: 
+ - The object type class(RIGHT side class) 
+    must be same or sub type class of variable type class(LEFT side)
+
+	A a1  = new B();
+
+	class B must be sub class of class A
+	else we will get CE: incompatible types
+
+==========================================================================
+Complete program on Inheritance
+==========================================================================
+//Person.java
+class Person {
+	String name;
+
+	void eat(){
+		System.out.println(name + " is eating");
+	}
+	void sleep() {
+		System.out.println(name + " is deep sleeping");
+	}
+}
+
+//Student.java
+class Student extends Person {
+	int sno;	 //extending		
+	String course;
+
+	void listen() {		  //reusing Person class members in Student
+	    System.out.println(name + " is listening "+ course);
+	}			//as if it is Student class member
+
+	void reply() {
+	    System.out.println(name + " is replying to "+ course + " questions");
+	}
+
+	void write() {
+	    System.out.println(name + " is writing "+ course + " notes");
+	}
+
+	void read() {
+	    System.out.println(name + " is reading "+ course + " notes");
+	}
+}

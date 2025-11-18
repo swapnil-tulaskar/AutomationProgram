@@ -1,0 +1,1737 @@
+25-07-2024		    ORACLE
+=========		   ========
+	- In IT field user can interact with two types of applications.
+		1.Front end application
+		2.Back end application
+
+1.Front end application:
+====================
+	- FEA is an application where the end-users are interacting directly.
+		Ex: Register form,Login form,View form,......etc
+
+	Design & Develop : UI technologies(html,css,javascript,angularJS,React,...etc)
+	-----------------------------
+	
+2.Back end application:
+====================
+	- BEA is an application where we store the end-users data / information.
+		Ex: Database
+	Design & Develop : DB technologies(oracle,mysql,sqlserver,db2,postgresql,....etc)
+	------------------------------  
+Server Side Technologies:
+======================
+	- these technologies are used to establish connection between 
+front end application and back end application.
+	Ex: Java,.Net,Python,Php,.....etc
+
+What is Oracle:
+=============
+	- it is a DB software / Back end tool / RDBMS product / ORDBMS module.
+
+Where we want to use oracle:
+=========================
+	- there are different applications where we use "oracle".
+		> Banking applications
+		> HR management system applications
+		> Sales & Production management system applications
+		> Education system applications
+		> Hospital management system applications
+		> Transport system applications,.........etc
+
+Who want to learn oracle:
+======================
+	- Java,Python,PowerBI,AWS,Devops,Testing,Oracle DBA,DS,Data Analyst.
+
+What about oracle jobs:
+====================
+	- Oracle developer.
+	- SQL developer
+	- PL/SQL programmer
+	- DB developer
+
+What is pre-requisites:
+===================
+	- No 
+=============================================================================
+26-07-2024:
+===========
+Oracle Course & Content Details:
+============================
+	Course Name	: Oracle19c 
+	Duration		: 45 - 55 sessions
+	Time		: 4.15pm - 5.45pm (10-15mint doubts)	
+	Course Type	: Online & Offline
+
+Oracle Content:
+=============
+	Topic-1 : DBMS
+	Topic-2 : ORACLE s/w 
+	Topic-3 : SQL 
+	Topic-4 : Normalization
+	Topic-5 : PL/SQL
+	Topic-6 : Dynamic SQL
+
+What about oracle notes:
+====================
+	- Every day class notes will be uploaded into google class room/ google drive.
+
+The End of the oracle course:
+========================
+	- Complete oracle19c material(.pdf)
+	- IQ's 
+	- Examples(300+) + Class examples(200+) ==> 500+
+	- Resume models (Frsh & Exp)
+	- Oracel course certificate from Nareshit management.
+==============================================================================
+29-07-2024		Topic-1 : DBMS
+=========		=============
+
+What is Data ?
+=============
+	- it is a rawfact (i.e characters,numbers,special characters and symbols).
+	- data never give meaningfull statements.
+
+	Ex:
+		10021 is data 		SMITH is data
+		10022 is data		ALLEN is data
+		10023 is data		MILLER is data
+
+
+What is Information?
+==================
+	- processing data is called as "information".
+	- it always provide meaningfull statements.
+
+	Ex:
+		Customer_Id		Customer_Name
+		===========		===============
+		10021 			SMITH 
+		10022 			ALLEN 
+		10023 			MILLER 
+
+
+What is Database ?
+================
+	- it is a memory where we want to store collection of inter-related information of 
+a particular business organization.
+
+
+What is inter-related information:
+===========================
+	- depending on each other.
+	Ex:
+		No customers - No products
+		No products    - No customers
+	Ex:
+		No departments  - No employees
+		No employees     - No departments
+
+Types of Databases ?
+==================
+	- there are two types of databases in real world.
+		1. OLTP (online transaction processing)
+		2. OLAP (online analytical processing)
+
+1. OLTP:
+=======
+	- these databases are used for storing "day-to-day" transations information.
+		Ex: oracle,sqlserver,mysql,postgresql,db2,......etc
+
+2. OLAP:
+=======
+	- these databases are used for storing "historical information" (i.e Bigdata)
+		Ex: datawarehouse
+
+What is DBMS?
+=============
+	- it is a software which is used to manage and maintain data / information with 
+in the database.
+	- by using DBMS s/w we will perform the following operations are,
+		> Creating Database
+		> Designing Tables
+		> Storing data
+		> Manipulate data
+		> Reading data
+		> Deleting data
+	- Here DBMS s/w will act as an interface between User and Database.
+		User <--------> DBMS s/w <--------------> Database
+
+Models of DBMS?
+==============
+	- there are three models in DBMS.
+		1) Hierarchical database management system(HDBMS)
+			Ex: IMS s/w (information management system)
+		2) Network database management system(NDBMS)
+			Ex: IDBMS s/w (integrated database management system)
+
+	NOTE: HDBMS,NDBMS models are outdated in real time.
+	=====
+3) Relation database management system(RDBMS):
+==========================================
+	- This RDBMS model again classified into two modules.
+		i) Object Relational Database Management System(ORDBMS):
+		===================================================
+			- data can be stored in the form of "Tables".
+				a table = collection of rows & columns.
+				a row   = group of columns.
+			- a row is also called as "Records / Tuples".
+			- a column is also called as "Attributes / Fileds".
+			- a table is having maximum 1000 columns and unlimited rows.(i.e depending on hard disk)
+			- these databases are completely depends on "SQL" so that 
+			these databases are called as "SQL Databases".
+		Ex: Oracle,SQLserver,MySQL,DB2,Sybase,Maxdb,Informix,Ingrees,Teradata,Postgresql,.....etc
+
+		ii) Object Oriented Database Management System(OODBMS):
+		==================================================
+			- data can be organizaed in the form of "Objects".
+			- these databases are not depends on "SQL" so that these are 
+			called as " NOSQL Databases".
+			- these databases are completely depends on "OOPS" concept.
+		Ex: MongoDB,Cassandra,.....etc
+==============================================================================
+30-07-2024:			Topic-2 : ORACLE 
+==========			===============
+Introduction to Oracle:
+===================
+	- Oracle is RDBMS product / ORDBMS module / DB software / Backend Tool.
+	- Oracle was introduced by "Oracle corporation" in 1979.
+	- Oracle is used store data / information permanently along with security.
+	- The first version of oracle s/w is "oracle 1.0" version.
+
+Versions of Oracle s/w:
+===================
+		- Oracle 1.0
+		- Oracle 2.0
+		- Oracle 3.0
+		- Oracle 4.0
+		- Oracle 5.0
+		- Oracle 6.0
+		- Oracle 7.0
+		- Oracle 8.0
+		- Oracle 8i ( internet )
+		- Oracle 9i
+		- Oracle 10g ( grid technologies )
+		- Oracle 11g
+		- Oracle 12c ( cloud technologies )
+		- Oracle 18c
+		- Oracle 19c (latest version)
+		- Oracle 21c ( very latest version )
+		- Oracle 23c (Beta version)
+
+31-07-2024:
+=========
+Types of oracle s/w editions:
+========================
+	- oracle s/w is available in two editions in real time.
+		1. Oracle express edition 
+		======================
+			- this edition is supporting partial features of oracle.
+		Ex: Recyclebin,Flashback,Purge,Partition tables,... are not allowed.
+
+		2. Oracle enterprise edition:
+		=======================
+			- this edition is supporting all features of oracle.
+		Ex: Recyclebin,Flashback,Purge,Partition tables,... are allowed.
+
+NOTE:
+======
+	- when we want to install oracle s/w (if any edition) we need a platform.
+
+What is a Platform?
+================
+	- it is a combination of operating system and micro-processor.
+	- there are two types of platforms,
+
+	i) Platform Dependent:
+	===================
+		- it supports only one operating system with the combination of 
+any micro-processor.
+	Ex: Cobal,Pascal,C,C++.
+
+	ii) Platform Independent:
+	======================
+		- it supports any operating system with the combination of 
+any micro-processor.
+	Ex: Oracle,Java,.NET core,Python,........etc
+
+NOTE:
+======
+	- Oracle is a platform independent an RDBMS product i.e it can install in any
+operating system such as "Windows,Linux,Unix,Mac,Solaries,........" etc.
+
+How to download oracle19c enterprise edition s/w:
+==========================================
+https://www.oracle.com/in/database/technologies/oracle19c-windows-downloads.html
+
+How to install oracle19c enterprise edition s/w:
+========================================
+	- follow the following video from google class room.
+
+01-08-2024:
+===========
+Working with oracle:
+=================
+	- Once we are installing oracle software internally there two components
+are installed in the system those are,
+		1. Client component
+		2. Server component
+
+1. Client component:
+==================
+	- by using client tool we will perform the following three operations are,
+
+		Step1: User can connect to oracle server.
+			Enter username : SYSTEM (default username)
+			Enter password  : TIGER (created at oracle installation)
+			connected.
+
+		Step2: User can send request to oracle server.
+			Request : SQL query 
+
+		Step3: User will get response from oracle server.
+			Response : Result / Output
+
+	Ex: SQLPLUS,SQL Developer,Toad,.....etc client tools.
+	
+2. Server component:
+==================
+	- server is having two more sub-components are,
+		i) Instance
+		ii) Database
+i) Instance:
+=========
+	- it is a temporary memory which will allocate from RAM.
+	- data can be stored temporarly.
+
+ii) Database:
+===========
+	- it is a permanent memory which will allocate from Harddisk.
+	- data can be stored permanently.
+
+NOTE:
+=====
+	When we want to work on oracle database server then we need to follow the 
+following two steps are,
+		i) Connect
+		ii) Communicate
+
+i) Connect:
+==========
+	- when a user want to connect to oracle server then we need a DB tool is 
+known as "SQLplus".
+
+ii) Communicate:
+==============
+	- when we want to communicate with database then we required a DB 
+language is called as "SQL".
+
+02-08-2024:
+===========
+SQLPLUS vs SQL:
+===============
+	
+	SQLPLUS						SQL
+	========						====
+1. it is DB tool which was introduced 			1. it is DB language which 
+by "oracle corporation".				was introduced by "IBM".
+
+2. it is used to connect to oracle server.			2. it is used to communicate 
+						with database.
+
+3. it will act as an editor for writting 			3. it will provide sub languages
+and executing SQL commands & PL/SQL 			(ddl,dml,dql/drl,tcl,dcl) are used 		
+programs.						to perform some operations
+						over database.
+
+How to connect to oracle server:
+============================
+> go to all programs
+	> click on sqlplus icon
+		Enter username: SYSTEM(default username)
+		Enter password : LION (at the time oracle s/w installation)
+		connected.
+
+Connectivity Problems:
+====================
+Problem-1:
+=========
+Enter user-name: SYSTEM
+Enter password: LION
+ERROR:
+ORA-12560: TNS:protocol adapter error
+
+Solution:
+========
+> go to services
+	> go to oracleserviceORCL option
+		> Double click on it
+			> click on start button
+				> click on apply & ok button
+
+> go to SQLPLUS 
+	Enter user-name: SYSTEM
+	Enter password: LION
+	connected.
+
+Problem-2:
+=========
+Enter user-name: SYSTEM
+Enter password: LION
+ERROR:
+ORA-28000: The account is locked.
+
+Solution:
+========
+SQL> CONN
+Enter user-name: \sys as sysdba ( default username)
+Enter password: sys (default password)
+connected
+
+How to lock / unlock a user account in oracle:
+======================================
+syntax:
+======
+ALTER USER <username> ACCOUNT LOCK / UNLOCK;
+
+EX:
+SQL> ALTER USER SYSTEM ACCOUNT UNLOCK;
+User altered.
+
+SQL> CONN
+Enter user-name: SYSTEM
+Enter password: LION
+Connected.
+
+Problem-3:
+=========
+> go to open SQLPLUS
+	Enter user-name: SYSTEM	(or)	Enter user-name: \sys as sysdba
+	Enter password: LION		Enter password : sys
+Error:
+unable to connect to oracle server.
+	
+Solution:
+========
+	- re-installation oracle s/w.
+
+How to create a new username and password in oracle server:
+====================================================
+syntax:
+=======
+CREATE USER <username> IDENTIFIED BY <password>;
+
+Ex:
+> go to open SQLPLUS
+	Enter username : SYSTEM
+	Enter password : LION
+	connected.
+
+SQL> CREATE USER MYDB4PM IDENTIFIED BY 123;
+User created.
+
+Grant "connect" permission to user(MYDB$PM):
+========================================
+syntax:
+======
+GRANT <privilege name> TO <username>;
+
+Ex:
+> go to open SQLPLUS
+	Enter username : SYSTEM / LION
+	connected.
+
+SQL> GRANT CONNECT TO MYDB4PM;
+Grant succeeded.
+
+SQL> CONN
+Enter user-name: MYDB4PM
+Enter password: 123
+Connected.
+
+How to change password for user in oracle:
+====================================
+syntax:
+=======
+PASSWORD;
+
+EX:
+SQL> PASSWORD;
+Changing password for MYDB4PM
+Old password: 123
+New password: ABC
+Retype new password: ABC
+Password changed.
+
+SQL> CONN
+Enter user-name: MYDB4PM
+Enter password: ABC
+Connected.
+
+03-08-2024:
+==========
+How to re-create a new password for USER if we forgot it:
+================================================
+syntax:
+======
+ALTER USER <username> IDENTIFIED BY <new password>;
+
+EX:
+> go to open SQLPLUS
+	Enter user-name: SYSTEM/LION
+	connected.
+SQL> ALTER USER MYDB4PM IDENTIFIED BY MYDB4PM;
+
+SQL> CONN
+Enter user-name: MYDB4PM/MYDB4PM
+Connected.
+
+How to re-create a new password for SYSTEM admin if we forgot it:
+=========================================================
+> go to open SQLPLUS
+	Enter user-name: \sys as sysdba (default username)
+	Enter password : sys  (default password)
+	connected.
+
+SQL> ALTER USER SYSTEM IDENTIFIED BY TIGER;
+
+SQL> CONN
+Enter user-name: SYSTEM/TIGER
+Connected.
+
+How to view username in oracle if we forgot it:
+========================================
+syntax:
+======
+SELECT USERNAME FROM ALL_USERS; ( ALL_USERS is pre-defined table)
+
+EX:
+SQL> CONN
+Enter user-name: SYSTEM/TIGER
+Connected.
+
+SQL> SELECT USERNAME FROM ALL_USERS;
+
+How to drop / delete a user from oracle server:
+=======================================
+syntax:
+=======
+DROP USER <username> CASCADE;
+
+EX:
+SQL> CONN
+Enter user-name: SYSTEM/TIGER
+Connected.
+
+SQL> DROP USER MYDB4PM CASCADE;
+User dropped.
+
+To clear the SQLPLUS editor:
+=========================
+syntax:
+=======
+CL SCR;
+
+To exit / disconnect from oracle server:
+==================================
+syntax:
+=======
+EXIT;
+======================================================================
+		Topic-3 : SQL 
+		===========
+Introduction to SQL:
+=================
+	- SQL stands for "structure query language" which was introduced by 
+	"IBM".
+	- SQL is used to communicate with database.
+	- The initial name is "SEQUEL"  and later renamed as a "SQL".
+	- SQL is not a case-sensitive language i.e user can write sql queries 
+in either upper case / lower case / combination of upper and lower case characters.
+		EX:
+		SQL> SELECT * FROM EMP;-------executed
+		sql> select * from emp; --------executed
+		Sql> SelecT * From Emp; --------executed
+	- Every sql query should ends with a " ; ".
+	- Storage data/information is a case-sensitive in oracle.
+
+Sub-Languages of SQL:
+====================
+	- there are five sub-languages of SQL.
+
+1) Data Definition Language(DDL):
+=============================
+	> CREATE 
+	> ALTER
+		> ALTER - MODIFY
+		> ALTER - ADD
+		> ALTER - RENAME
+		> ALTER - DROP
+	> RENAME
+	> TRUNCATE
+	> DROP
+
+New features in DDL:
+===================
+	> RECYCLEBIN
+	> FLASHBACK
+	> PURGE
+
+2) Data Manipulation Language(DML):
+================================
+	> INSERT
+	> UPDATE
+	> DELETE
+	> MERGE (new command)
+
+3) Data Retrieval / Query  Language(DRL / DQL):
+========================================
+	> SELECT
+
+4) Transaction Control Language(TCL):
+=================================
+	> COMMIT
+	> ROLLBACK
+	> SAVEPOINT
+
+5) Data Control Language(DCL):
+===========================
+	> GRANT
+	> REVOKE
+======================================================================
+05-08-2024:
+==========
+DATATYPES IN ORACLE:
+====================
+	- it is an attribute which is used to store "what type of data" into a 
+column in the table.
+	- oracle supports the following datatypes are,
+		i) Number datatype
+		ii) Character / String datatypes
+		iii) Long datatypes
+		iv) Date datatypes
+		v) Raw & Long Raw datatypes
+		vi) LOB datatypes(large object datatypes)
+
+i) Number datatype:
+=================
+	 - it again two types.
+		i) Number(p)
+		ii) Number(p,s)
+i) Number(p):
+===========
+	- it will store integer values only.
+
+ii) Number(p,s):
+=============
+	- it will store float values only.
+
+Precision(p):
+===========
+	- counting all digits in the expression.
+	- the maximum size of precision is 38 digits.
+
+	Ex:
+		i) 34
+		precision = 2
+
+		ii) 756345
+		precision = 6
+	
+	Ex:
+		SNO number(6)
+		=============
+		0
+		.
+		.
+		999999
+		1000000 (error)
+
+Scale(s):
+=======
+	- counting the right side digits from a float expression.
+	- there is no maximum size of scale because it is a part of a precision.
+
+	Ex:
+		i) 67.24
+		precision = 4
+		scale = 2
+	
+		ii) 8746.362
+		precision = 7
+		scale = 3
+
+	Ex:
+		PRICE number(8,2)
+		================
+		0.0
+		34.23
+		87.00
+		8764.23
+		999999.99
+		1000000(1000000.00)----error
+
+ii) Characters / String datatypes:
+============================
+	- storing string format data only.
+	- in database string can represent with '<string>'.
+
+	Ex:	Empname char(10)
+		================
+	smith-------> error 
+	'smith'-----> smith
+	1234--------> error
+	'1234'------> 1234
+	34.25 -----> error
+	'34.25'-----> 34.25
+
+			   string format data
+				 ||
+		characters only		alphanumeric characters
+                                     string 				string
+		        ||				    ||
+		[ A - Z / a - z ]		[ A-Z / a - z, 0 - 9 ,@,#,$,%,&,_,....etc]
+	Ex: 'smith','SMITH',....etc		Ex: 'smith123@gmail.com',password,pancard,....etc
+
+	- these are again classified into two types.
+		i) Non-unicode datatypes:
+		======================
+			- these are used for storing "localized data" (i.e English Language only)
+				I) char(size)
+				II) varchar2(size)
+
+		ii) Unicode datatypes:
+		===================
+			- these are used for storing "globalized data" (i.e all National Languages)
+				I) Nchar(size)
+				II) Nvarchar2(size)
+
+06-08-2024:
+==========
+char(size):
+=========
+	- it is a fixed length datatype(i.e static)
+	- it will store non-unicode characters in the form 1 char = 1 byte.
+	- the maximum size is 2000 bytes.
+
+	Disadvantage:
+	============
+		- memory wasted.
+
+ii) varchar2(size):
+===============
+	- it is variable length datatype(i.e dynamic datatype).
+	- it will store non-unicode characters in the form of 1 char = 1 byte.
+	- the maximum size is 4000 bytes.
+
+	Advantage:
+	==========
+		- memory saved.
+		
+i) Nchar(size):
+===========
+	- it is fixed length datatype(i.e static datatype).
+	- it will store unicode characters in the form of 1 char = 1 byte.
+	- the maximum size is 2000 bytes.
+
+	Disadvantage:
+	============
+		- memory wasted.
+
+
+ii) Nvarchar2(size):
+===============
+	- it is variable length datatype(i.e dynamic datatype).
+	- it will store unicode characters in the form of 1 char = 1 byte.
+	- the maximum size is 4000 bytes.
+
+	Advantage:
+	==========
+		- memory saved.
+
+Long datatype:
+============
+	- it is variable length datatype(i.e dynamic datatype).
+	- it will store non-unicode & unicode characters in the form of 1 char = 1 byte.
+	- the maximum size is 2gb.
+	- a table is haivng only one long datatype column.
+
+07-08-2024:
+===========
+Date datatypes:
+=============
+	- to store date and time information of a particular day.
+		i) Date
+		ii) Timestamp
+
+i) Date:
+======
+	- storing date & time information but time is optional.
+	- if user not enter time information then oracle server will take 12:00:00 am 
+	by default.
+	- the default date and time format of oracle is :
+		' DD-MON-YY/YYYY   HH:MI:SS '
+		 ' 08-AUG-24/2024     16:26:xx '
+		    1    1       2              1   1    1 -----------> 7 BYTES (fixed memory)
+	- the maximum size of date datatype is 7 bytes.
+	- the range of date datatypes in oracle from '01-JAN-4712 BC' to '31-DEC-9999 AD'.
+
+ii) Timestamp:
+============
+	- storing date & time information along with milliseconds.
+	- the default format of timestamp datatype is :
+		' DD-MON-YY/YYYY   HH:MI:SS.MS'
+		 ' 11-JUL-24/2024      15:19:XX.XXXX '
+		    1    1       2              1   1    1    4-----------> 11 BYTES (fixed memory)
+	- the maximum size of timestamp datatype is 11 bytes.
+
+08-08-2024:
+==========
+Raw & Long Raw datatypes:
+=======================
+	- these datatypes are used to store image file / audio file / video file in the 
+form of 0101000101010 binary format.
+		Raw:
+			- it is a static datatype.
+			- maximum size is 2000 bytes.
+
+		Long Raw:
+			- it is a dynamic datatype.
+			- maximum size is 2gb.
+
+LOB datatypes:
+==============
+	- LOB stands for large objects.
+		i) CLOB
+		ii) NCLOB
+		iii) BLOB
+i) CLOB:
+=======
+	- it stands for "character large object".
+	- it is a dynamic datatype.
+	- it will store non-unicode characters in the form of 1 char = 1 byte.
+	- maximum size is 4gb.
+
+ii) NCLOB:
+=========
+	- it stands for "national character large object".
+	- it is a dynamic datatype.
+	- it will store unicode characters in the form of 1 char = 1 byte.
+	- maximum size is 4gb.
+
+iii) BLOB:
+========	
+	- it stands for "binary large object".
+	- it is a dynamic datatype.
+	- it will store image / audio / video file in the form of 01001010101 binary 
+	format.
+	- maximum size 4gb.
+
+Non-unicode characters:
+====================
+	- char(size)	-	2000 bytes
+	- varchar2(size)	-	4000 bytes
+	- long		-	2gb
+	- clob		- 	4gb
+
+Unicode characters:
+====================
+	- Nchar(size)	-	2000 bytes
+	- Nvarchar2(size)	-	4000 bytes
+	- long		-	2gb
+	- Nclob		- 	4gb
+
+Binary data:
+===========
+	- Raw		- 	2000bytes
+	- Long Raw	-	2gb
+	- blob		-	4gb
+=============================================================================
+1) Data Definition language(DDL):
+=============================
+CREATE:
+=======
+	- to create a new database object such as "Tables,Views,Synonyms,Sequence,.......etc".
+
+How to create a new table in oracle:
+==============================
+syntax:
+======
+create table <table name>(<column name1> <datatype>[size],<column name2> <datatype>[size],.............);
+
+Ex:
+> go to sqlplus 
+	Enter user-name: SYSTEM/TIGER
+	conneced.
+
+SQL> CREATE USER MYDB4PM IDENTIFIED BY MYDB4PM;
+SQL> GRANT CONNECT,CREATE TABLE TO MYDB4PM;
+
+SQL> CONN
+	Enter user-name: MYDB4PM/MYDB4PM
+	conneced.
+
+SQL> CREATE TABLE STUDENT(STID NUMBER(3),SNAME CHAR(10),SFEE NUMBER(6,2));
+Table created.
+
+How to view the structure of a table:
+===============================
+syntax:
+=======
+desc <table name>; [ describe command ]
+
+EX:
+SQL> DESC STUDENT;
+
+How to view the list of tables in oracle:
+================================
+syntax:
+=======
+select  * from tab; [ tab is pre-defined table name ]
+
+EX:
+SQL> SELECT * FROM TAB;
+
+ALTER command:
+===============
+	- to change / modify the structure of a table.
+	- this command is having four sub-commands those are,
+		i) ALTER - MODIFY
+		ii) ALTER - ADD
+		iii) ALTER - RENAME
+		iv) ALTER - DROP
+
+i) ALTER - MODIFY:
+===============
+	- to change datatype and also the size of datatype of a specific column in the table.
+
+syntax:
+======
+ALTER TABLE <TN> MODIFY <COLUMN NAME> <NEW DATATYPE>[NEW SIZE];
+
+EX:
+SQL> ALTER TABLE STUDENT MODIFY SNAME VARCHAR2(5);
+
+ii) ALTER - ADD:
+=============
+	- to add a new column to an existing table.
+syntax:
+======
+ALTER TABLE <TN> ADD <NEW COLUMN NAME> <DATATYPE>[SIZE];
+
+EX:
+SQL> ALTER TABLE STUDENT ADD SMBNO CHAR(10);
+
+iii) ALTER - RENAME:
+==================
+	- to change a column name in the table.
+
+syntax:
+=======
+ALTER TABLE <TN> RENAME <COLUMN> <OLD COLUMN NAME> TO <NEW COLUMN NAME>;
+
+EX:
+SQL> ALTER TABLE STUDENT RENAME COLUMN SNAME TO STUDENT_NAME;
+
+iv) ALTER - DROP:
+===============
+	- to delete a column from a table.
+syntax:
+======
+ALTER TABLE <TN> DROP <COLUMN> <COLUMN NAME>;
+
+EX:
+SQL> ALTER TABLE STUDENT DROP COLUMN SFEE;
+
+RENAME command:
+================
+	- to change a table name.
+syntax:
+======
+RENAME <OLD TABLE NAME> TO <NEW TABLE NAME>;
+
+EX:
+SQL> RENAME STUDENT TO STUDENT_DETAILS;
+SQL> RENAME STUDENT_DETAILS TO STUDENT;
+
+09-08-2024:
+===========
+TRUNCATE:
+==========
+	- deleting rows but not columns from a table.
+	- we cannot delete a specific row from a table because truncate command 
+is not allowed "WHERE" clause condition.
+	- deleting data(rows) from a table permanently.
+
+syntax:
+======
+TRUNCATE TABLE <TABLE NAME>;
+	
+How to give "INSERT" permission to user:
+===================================
+SQL> CONN
+	Enter username : SYSTEM/TIGER
+	connected.
+SQL> GRANT UNLIMITED TABLESPACE TO MYDB4PM;
+
+SQL> CONN
+	Enter username : MYDB4PM/MYDB4PM
+	connected.
+
+SQL> INSERT INTO STUDENT VALUES(101,'SMITH','9876543212');
+SQL> INSERT INTO STUDENT VALUES(102,'ALLEN','7876543212');
+
+SQL> TRUNCATE TABLE STUDENT;
+
+DROP:
+=====
+	- to delete a table(i.e rows & columns) from database.
+syntax:
+======
+DROP TABLE <TABLE NAME>;
+
+EX:
+SQL> DROP TABLE STUDENT;
+
+NOTE:
+=====
+	- before oracle10g enterprise edition once we drop a table from database then 
+it deleted permanently whereas from oracle10g enterprise edition once we drop a
+table from database then it deleted temporarly.
+
+New features in oracle10g enterprise edition:
+======================================
+1) RECYCLEBIN:
+=============
+	- it is a system defined table which is used to store the information about 
+deleted tables from database.
+
+How to view deleted tables in Recyclebin:
+===================================
+syntax:
+=======
+SELECT OBJECT_NAME,ORIGINAL_NAME FROM RECYCLEBIN;
+
+OBJECT_NAME				ORIGINAL_NAME
+--------------------------------------------------------------		------------------------------------------------------------------
+BIN$Ay6wcJusSxWcxAW1aUjx/g==$0		STUDENT
+
+2) FLASHBACK:
+=============
+	- it is DDL command which is used to restore a deleted table from recyclebin 
+to database.
+
+syntax:
+=======
+FLASHBACK TABLE <TABLE NAME> TO BEFORE DROP;
+
+EX:
+SQL> FLASHBACK TABLE STUDENT TO BEFORE DROP;
+
+3) PURGE:
+=========
+	- it is DDL command is used to delete a table permanently.
+
+Case-1: Deleting a specific table from recyclebin permanently:
+====================================================
+syntax:
+=======
+PURGE TABLE <TABLE NAME>;
+
+EX:
+SQL> PURGE TABLE TEST1;
+
+Case-2: Deleting all tables from recyclebin permanently:
+==============================================
+syntax:
+=======
+PURGE RECYCLEBIN;
+
+Case-2: Deleting a table from database permanently:
+============================================
+syntax:
+=======
+DROP TABLE <TABLE NAME> PURGE;
+
+EX:
+SQL> DROP TABLE STUDENT PURGE;
+
+NOTE:
+=====
+	- Recyclebin,Flashback and Purge are working under "USER"(i.e mydb4pm)
+but not under "DBA"(i.e system).
+
+ii) Data Manipulation Language(DML):
+===============================
+INSERT:
+=======
+	- to insert a new row data into a table.
+syntax-1:
+========
+INSERT INTO <TABLE NAME> VALUES(value1,value2,...................);
+
+EX:
+SQL> CREATE TABLE PRODUCTS(PCODE NUMBER(4),PNAME VARCHAR2(10),PRICE NUMBER(6,2));
+
+SQL> INSERT INTO PRODUCTS VALUES(1021,'P1',25.12);
+	- Here, no.of columns in a table and no.of values in the query must be match.
+
+syntax-2:
+========
+INSERT INTO <TABLE NAME>(<list of columns>) VALUES(value1,value2,..........);
+
+EX:
+SQL> INSERT INTO PRODUCTS(PCODE,PNAME,PRICE)VALUES(1022,'P2',456.23);
+SQL> INSERT INTO PRODUCTS(PCODE,PNAME)VALUES(1023,'P3');
+SQL> INSERT INTO PRODUCTS(PCODE)VALUES(1024);
+	- Here, we sending values for required columns.
+
+How to insert values into a table dynamically(i.e inserting multiple rows):
+==============================================================
+syntax-1:
+========
+INSERT INTO <TN>(&<column name1>,&<column name2>,.............);
+
+EX:
+SQL> INSERT INTO PRODUCTS VALUES(&PCODE,'&PNAME',&PRICE);
+Enter value for pcode: 1025
+Enter value for pname: P4
+Enter value for price: 50.24
+
+SQL> / ( To re-execute the last executed sql query in sqlplus editor)
+Enter value for pcode: 1026
+Enter value for pname: P5
+Enter value for price: 452.27
+
+SQL> / 
+............................................
+............................................
+............................................
+
+syntax-2:
+=========
+INSERT INTO <TN>(<list of columns>) VALUES(&<column name1>,..............);
+
+EX:
+SQL> INSERT INTO PRODUCTS(PCODE)VALUES(&PCODE);
+Enter value for pcode: 1028
+
+SQL> /
+...........................................
+
+12-08-2024:
+===========
+UPDATE:
+========
+	- to update all rows data in a table.
+		(or)
+	- to update a specific row data in a table by using "WHERE" clause condition.
+syntax:
+=======
+UPDATE <TN> SET <column name1>=<value1>,<column name2>=<value2>,..........
+...................[ WHERE <CONDITION> ];
+
+EX:
+SQL> UPDATE PRODUCTS SET PNAME='P9',PRICE=23.67 WHERE PCODE=1029;
+SQL> UPDATE PRODUCTS SET PCODE=NULL,PNAME=NULL,PRICE=NULL WHERE PNAME='P5';
+SQL> UPDATE PRODUCTS SET PCODE=1026,PNAME='P5',PRICE=450.25 WHERE PCODE IS NULL;
+
+SQL> UPDATE PRODUCTS SET PRICE=NULL;
+SQL> UPDATE PRODUCTS SET PRICE=5000;
+
+DELETE:
+=======
+	- to delete all rows from a table at a time.
+		(or)
+	- to delete a specific row from a table by using "WHERE" clause condition.
+syntax:
+======
+DELETE FROM <TABLE NAME> [ WHERE <condition> ];
+
+EX:
+SQL> DELETE FROM PRODUCTS WHERE PCODE=1025;
+SQL> DELETE FROM PRODUCTS WHERE PNAME IS NULL;
+SQL> DELETE FROM PRODUCTS;
+
+DELETE vs TRUNCATE:
+====================
+
+	DELETE				TRUNCATE
+	=======				==========
+1. it is a DML operation.			1. it is a DDL operation.
+
+2. deleting a specific row from a table.		2. we cannot delete a specific row.
+
+3. supporting "WHERE" clause condition.		3. does not supports "WHERE" clause condition.
+
+4. deleting data temporarly.			4. deleting data permanently.
+
+5. we can restore deleted data 		5. we cannot restore deleted data
+by using "ROLLBACK".			by using "ROLLBACK" command.
+
+6. execution speed is slow.			6. execution speed is fast.
+(deleting rows in one - by - one manner)		(deleting all rows as a page wise)
+
+3) Data Retrieval / Query  Language(DRL / DQL):
+========================================
+SELECT :
+========
+	- to retrieve all rows from a table at a time.
+		(or)
+	- to retrieve a specific row from a table by using "WHERE" clause condition.
+syntax:
+=======
+SELECT * / <list of columns> FROM <TABLE NAME> [ WHERE <condition> ];
+
+EX:
+SQL> SELECT * FROM DEPT;
+SQL> SELECT * FROM DEPT WHERE DNAME='SALES';
+
+SQL> SELECT * FROM EMP WHERE JOB='CLERK';
+SQL> SELECT * FROM EMP WHERE COMM IS NULL;
+
+ALIAS NAMES:
+============
+	- it is a temporary name created for columns and also table.
+	- there are two types of aliases,
+		i) column level alias:
+		==================
+			- in this level we are creating alias name for columns.
+		ii) table level alias:
+		================
+			- in this level we are creating alias name for table.
+syntax:
+======
+SELECT <column name1> [AS] <column alias name1>,<column name2> [AS] <column alias name2>,..........
+............ FROM <table name> <table alias name>;
+
+Ex:
+SQL> SELECT DEPTNO AS X,DNAME AS Y,LOC AS Z FROM DEPT D;
+			(OR)
+SQL> SELECT DEPTNO  X,DNAME  Y,LOC  Z FROM DEPT D;
+
+CONCATENATION OPERATOR(||):
+==========================
+	- to add two or more than two expressions.
+syntax:
+=======
+	<expression1> || <expression2> || <expression3> || ..........................
+
+Ex:
+SQL> SELECT 'THE EMPLOYEE'||' '||ENAME||' '||'IS WORKING AS A'||' '||JOB FROM EMP;
+
+DISTINCT keyword:
+=================
+	- to eliminate duplicate values from a specific column temporarly.
+syntax:
+======
+	distinct <column name>
+
+EX:
+SQL> SELECT DISTINCT JOB FROM EMP;
+SQL> SELECT DISTINCT DEPTNO FROM EMP ORDER BY DEPTNO;
+
+NOTE:
+=====
+	- when we want to display the large scale data tables in proper systematical 
+order in sqlplus editor then we need to set the following two property are,
+		i) Pagesize n
+		ii) Lines n
+
+i) Pagesize n:
+============
+	- by default a page can display maximum 14rows only.
+	- if we want change the size of a page then we set "pagesize" property.
+	- the maximum size of a page in sqlplus editor is 50000 rows.
+
+syntax:
+======
+SET PAGESIZE n;
+
+EX:
+SQL> SET PAGESIZE 100;
+
+ii) Lines n:
+=========
+	- by default each line is allowed 80 bytes(i.e 80 char's).
+	- if we want to increse the size of line then we set "lines" property in sqlplus editor.
+	- the maximum size of a line is 32767 bytes.
+syntax:
+======
+SET LINES n;
+
+EX:
+SQL> SET LINES 160;
+
+How to clear the screen:
+====================
+syntax:
+======
+CL SCR;
+
+How to exit / disconnect  from oracle server:
+====================================
+syntax:
+=======
+EXIT;
+==============================================================================
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Oracle [SQL & PL/SQL] @ 4:00 PM (IST) by Mr.Sudhakar.L
+ Day-1 https://youtu.be/XjBrMT5pZf4
+ Day-2 https://youtu.be/f3OiWpN_2mk
+ Day-3 https://youtu.be/nqNyhNO5W3o
+ Day-4 https://youtu.be/8RBStp2WmAE
+ Day-5 https://youtu.be/7q3GJwcsEE0
+Day-6 https://youtu.be/gea5WjBemsA
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Oracle [SQL & PL/SQL] @ 4:00 PM (IST) by Mr.Sudhakar.L
+ Day-1 https://youtu.be/XjBrMT5pZf4
+ Day-2 https://youtu.be/f3OiWpN_2mk
+ Day-3 https://youtu.be/nqNyhNO5W3o
+ Day-4 https://youtu.be/8RBStp2WmAE
+ Day-5 https://youtu.be/7q3GJwcsEE0
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

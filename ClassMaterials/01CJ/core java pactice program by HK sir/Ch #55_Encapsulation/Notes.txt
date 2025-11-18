@@ -1,0 +1,143 @@
+Working with Inheritance and LC-RP Architecture
+================================================
+1. What is an inheritance?
+2. Why inheritance?
+3. When inheritance?
+4. How inheritance?
+5. Sample program and execution flow?
+
+6. Advantages of inheritance?
+7. Problems if you develop inheritance for fun?
+8. Why must we favour to HAS-A relation over IS-A relation?
+9. Sample program to show Problems if we donot develop inherinace;
+   problems and advantages if we develop inheritance?
+10. LC-RP architecture, how inheritance supports LC and RP(Dynamic Binding)?
+11. Project develop by using OO Programming elements, Encapsulation and Inheritance?
+===================================================================================
+
+1. What is an inheritance?
+	- Inheritnace is one of the OOP principles	
+
+	- It is a Parent-Child relation
+			  Parent 
+
+		Child1    Child2   Child3
+
+
+	- The process of creating a new class/object 
+	  deriving from an existing class/object 
+	  is called inheritance.
+	
+	- For example:  
+	  class A { }
+	  class B extends A{ } //here we are deriving 
+	                    //class B from class A
+		//then class B is called sub type of class A
+
+	- class A is called Super class or Parent class Or Base class
+	- clss B  is called Sub class or Child class or Derived class
+
+2. Why inheritance?
+	- for obtaining the type, properties and behaviors of 
+	  one class/object to another class/object
+	  to treat new classes as sub type of an existing classes
+	  we will develop inheritance
+	  
+	- For example  
+		- for creating Student as Person type
+		- for creating Lion    as Animal type
+		- for creating Bus     as Vehicle type
+	   we must develop inheritance
+	   
+	- As part of inherintace we will develop
+	  child classes or sub type classes of an 
+	  existing class or object.
+
+3. When must we develop inheritance?
+   we will develop inheritance in the below two situations
+	1. for extending or implementing existing class 
+	   functionality by adding new properties and 
+	   new behviours in new class as sub type
+	   we will develop inheritance.
+	   
+	   - For example:
+		class Person { String name;}
+		class Student extends Person{ String course;}
+		
+		- for adding more properties and behaviors to 
+		  Person we will extend Person class
+	  
+	2. for creating new multiple objects of same type
+	   as one group for achieving code reusability and
+	   loose coupling between sub type objects and user object
+	   we will develop inheritance.
+	   
+	     - For example: without inheritance
+		class Person { }	here all these 4 objects	
+		class Student { }	are individual objects	
+		class Faculty { }	not same type of objects
+		class Admin { }
+	   
+	     - with inheritance we can create Student, Faculty and Admin
+	       objects as same type of objects Person
+	     
+		class Person { }	
+		class Student extends Person{ }	
+		class Faculty extends Person{ }		
+		class Admin   extends Person{ }	
+
+4. How can we develop inheritance?
+	- by using the keywords
+		1. extends 
+		2. implements
+
+	- For deriving a class from an interface 
+	  we must use implements keyword
+	   for example:
+	   	interface Example { }
+		class Sample implements Example{ }
+
+	- For deriving a class from a class or 
+	  for deriving an interface from an interface
+	  we must use extends keyword
+	   for example:
+		class A { }
+		class B extends A { }
+
+		interface I1 { }
+		interface I2 extends I1 { }
+		class C implements I2 { }
+
+ 5. Sample program and execution flow
+	//Example.java 
+	class Example {
+	   static int a = 10;
+	   int x = 20;
+	}
+
+     //====================================================
+	//Sample.java 
+	class Sample {
+
+		public static void main(String[] args) {
+			Example e1 = new Example(); //HAS-A relation
+			System.out.println(e1.a);
+			System.out.println(e1.x);
+		}
+	}
+     //====================================================
+	//Sample.java
+	class Sample extends Example {	//IS-A relation
+                                  
+		public static void main(String[] args) {
+			Sample s1 = new Sample(); //accessing with IS-A relation
+			System.out.println(s1.a);
+			System.out.println(s1.x);
+		}
+	    
+	}
+
+6. Sample project on OOP Basics, Encapsulation and Inheritance 
+	- The main purpose of inheritance is 
+	  extending and reusing exising class/object 
+	  functionality as sub type 

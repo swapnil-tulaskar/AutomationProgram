@@ -1,0 +1,7 @@
+What is selenium webdriver?
+basicaly a Selenium webdriver is a java interface, which contains n number of abstract methods and variables and
+that web driver interface is implemented by multiple classes like chrome driver class,firefox driver class and edge driver class etc.
+there are so many each browser having a diffrence class and those classes implemented by webdrivere interface.
+
+or 
+

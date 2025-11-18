@@ -1,0 +1,76 @@
+Object oriented programming basics revision with a project 
+======================================================================
+1. The OOP is one programming paradigm or a methodology or a technique.
+
+2. It provides set of suggestions 
+   1. for creating RWO in PW
+   2. by providing security to object data and 
+   3. by providing dynamic binding between objects communication 
+
+3. OOP is meant for developing business applications 
+
+4. For developing real world object in the programming world and to achieve 
+   security to object data and dynamic binding between objects communication 
+   OOP provides 9 concepts 
+
+   	1. class
+	2. object
+
+	3. encapsulation
+	4. inheritance
+	5. polymorphism
+	6. abstraction
+
+	7. message passing
+	8. loose coupling
+	9. runtime polymorphism
+
+5. A programming language that provides syntaxes, semantics and programming 
+   concepts for creating RWO in PW by implementing above OOP concepts 
+   that programming language is called Object Oriented Programming language.
+   
+   For example: Java, C#.net, Python, PHP are OOP languages 
+	
+6. Java provides below 8 programming elements for creating RWO in PW and 
+   for implementing above 9 OOP concepts
+
+	1. module	-> for grouping packages
+
+	2. pacakge	-> for grouping classes
+
+	3. class	-> for representing an object and 
+			   for for grouping variables and methods	
+
+	4. variables	-> for representing values and 
+			   for providing memory for storing values
+
+	5. methods	-> for representing operation and 
+			   for implementing logic to perform this operation
+
+	6. constructors	-> for initializing object instance fileds
+
+	7. blocks	-> for initializing static and instance fileds
+			   common to all constructors
+
+	8. inner classes-> for representing inner object of an outer object
+
+7. In a project we must create 
+	1. Multiple classes based on multiple different type of objects 
+
+	2. Multiple variables based on multiple values or objects we need to store 
+
+	3. Multiple methods based on multiple different operations we need to perform  
+
+
+8. The main target of OOP is creating RWO in PW 
+   which is belongs to the current business application 
+
+9. For creating RWO in PW, we must consider below 
+    characteristics of an object	for example
+   	1. object type			-> [Student]	, [Employee]	
+   	2. object state			-> [sno, sname] , [eno, ename]
+   	3. object behaviour		-> [listen(),..], [work(), ...]
+   	4. object identity		-> [sno]	, [eno]
+   	5. individial objects of this type->[hk, bk,...], [hk, bk,...]
+
+10. For creating RWO in PW we must follow below steps 

@@ -1,0 +1,100 @@
+Local object , current object, argument object 
+=====================================================================
+- An object that is created inside a method or block or constructor 
+  by assigning it to a local reference variable we call it as local object 
+  
+  For example:
+	void m1() {
+	   Example e1 = new Example();
+	    //local	   //local object	
+	    //refernced      
+	    //variable
+	}
+
+- An object using which we call as non-static method or constructor 
+  is called current object
+  
+   For example: 
+	void m1() {
+	   Example e1 = new Example(); //local object w.r.t to m1() method	
+	   
+	   e1.m2();  //the same e1 object is CO w.r.t to m2() method	
+	}
+	void m2() {
+	
+	}
+  
+- An object that is passed as input or argument to a method
+  is called argument object
+  
+    For example:
+	void m1() {
+	  Example e1 = new Example(); //LO w.r.t m1()
+	  e1.m2();		      //CO w.r.t m2()
+	  m3(e1);		      //AO w.r.t m3()
+	}
+
+	void m2() { }
+	
+	void m3(Example e){ }
+
+Always we create objects inside main method or some other user defined methods, 
+further to perform different operations on those objects
+we share/pass those objects to other user defined static and non-static methods.
+
+To a static method, we can pass object only in one way as argument   
+To a non-static method, we can pass object in two ways 
+	either as current object or as argument object or as both 
+
+Always CO is passed as first argument 
+       AO is passed as second argument 
+		e1.m1(e2); |-> e1 is CO, passed as first argument
+			   |-> e2 is AO, passed as second argument
+			
+Inside the method 
+	1. CO is received and stored in this keyword 
+	2. AO is received and stored in parameter
+
+Inside this called method
+	1. To read and modify non-static variables values
+	   from CO, we must access them either
+	   directly by their name or by using this keyword
+	   
+	2. To read and modify non-static variables values
+	   from AO, we must access them by using parameter
+	   
+Below program explains all above points
+
+ class Example {			class Test {
+   int x = 10;				  public static void main(String[] args) { 
+						
+   static void m1(Example e) {			Example e1 = new Eaxample();
+						
+						Example.m1(e1);
+   }						
+	  
+   void m2() {					Example e2 = new Example();
+	   
+						e2.m2();
+   }						
+	   
+   void m3(Example e) {				e1.m3(e2);  //CO->e1, AO->e2
+						
+						e2.m3(e1);  //no CE, CO->e2, Ao->e1
+   }						e1.m3(e1);  //no CE, CO and AO ->e1
+						e2.m3(e2);  //no CE, CO and AO ->e2	
+}					     }
+					}	
+
+
+To receive both CO and AO, the method must be a non-static method
+and it must have parameter of class type
+
+If we modify CO or AO data inside this called method,
+those modification are effected to calling method.
+
+it means, after method execution inside calling method
+if we read object data by using the orginal referenced variable 
+we will get the called method modified values
+
+What is the output from below program?

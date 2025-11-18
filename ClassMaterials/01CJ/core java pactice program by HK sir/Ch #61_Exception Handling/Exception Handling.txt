@@ -1,0 +1,100 @@
+Exception Handling
+==============================================================
+1. What is an exception?
+	1. runtime error
+	2. it is an object 
+	3. which is an instance of Throwable 
+	   or one of its sub classes
+
+2. Why exception?
+	1. for terminating program abnormally
+
+3. When does an exception occure?
+	1 because of wrong values or wrong logic 
+
+4. What happend when an exception raised?
+	1. program execution is terminated abnormally
+	2. JVM displays complete information about this exception
+
+5. What is the information an exception object contan?	  
+	the exception information contains
+		1. Thread name
+		2. Exception classname
+		3. Reason for the exception
+		4. place of the exception
+
+6. How can we solve an exception?
+	- either by changing values
+	  or by changing logic
+
+7. Who will pass values to the program?
+	- end-user
+
+8. Then who must change values, when wrong values are passed?
+	- end-user
+
+9. Can end-user understand the exception message printed by JVM
+   to solve exception by passing corret values?
+	- No
+
+10. Then what we do in the program?
+	- we must handle this exception
+	 to print user understandable message
+	 
+11. What is exception handling?
+	- the process of catching or reporting the exception 
+	  to this method caller is called exception handling
+
+12. Why exception handling?
+	1. to stop abnormal termination
+	2. to print user understandable message
+	3. to execute alternative logic
+
+13. What are the keywords used in Exception handling?
+	1. try/catch -> for catching exception
+	2. thorws    -> for reporting exception to this method caller
+
+14. What are the total number of keywords using this chapter?
+	In total we will use 5 keywords
+		1. try
+		2. catch
+		3. finally
+		4. throw
+		5. throws
+
+15. What is the need of try and catch?
+   
+	try	-> is a block that allows us to place 
+		   exception causing statements and its
+		   dependent statements
+	    
+	catch	-> is a parameterized block it is used for
+	           catching an exception that is thrown from
+		   the body of corresponding try statement
+
+16. Syntax for using try,catch?
+		void m1(){
+		   ------	
+		   ------	normal statements	
+		   ------	
+		   try {	
+			   ---
+			   ---	exeption causing statements
+			   ---  and their dependent statements
+		   }	
+		   catch(SomeException1 e1) {
+			   ---
+			   ---  SomeException1 handling logic
+			   ---	  either message printing or
+			   ---    alterative logic
+		   }
+		   catch(SomeException2 e2) {
+			   ---
+			   ---  SomeException2 handling logic
+			   ---	  either message printing or
+			   ---    alterative logic
+		   }
+		   ----
+		   ----	normal logic
+		   ----
+		}

@@ -1,0 +1,19 @@
+src/
+├─ components/
+│   ├─ beds/
+│   │   ├─ BedList.jsx
+│   │   ├─ BedCard.jsx
+│   ├─ bookings/
+│   │   ├─ BookingForm.jsx
+│   ├─ owner/
+│   │   ├─ OwnerPanel.jsx
+│   ├─ shared/
+│   │   ├─ RentTracker.jsx
+├─ pages/
+│   ├─ HomePage.jsx          # New home page component
+│   ├─ FacilitiesSection.jsx  # Hostel facilities
+│   ├─ InfoSection.jsx       # Instructions & warnings
+├─ firebase/
+│   ├─ config.js
+├─ App.jsx
+├─ index.js

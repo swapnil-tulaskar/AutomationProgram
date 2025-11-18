@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Select User Date of Birth</h2>
+
+
+<form action="/action_page.php">
+  <label for="birthday">My DOB:</label>
+  <input type="date" id="DOB" name="birthdate">
+</form>
+
+<p><strong>Note:</strong> type="date" is not supported in Internet Explorer 11 or prior Safari 14.1.</p>
+
+</body>
+</html>

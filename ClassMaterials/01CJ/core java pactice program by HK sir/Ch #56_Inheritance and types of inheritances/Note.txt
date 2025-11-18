@@ -1,0 +1,322 @@
+Working with Inheritance and LC-RP Architecture
+================================================
+1. What is an inheritance?
+2. Why inheritance?
+3. When inheritance?
+4. How inheritance?
+5. Sample program and execution flow?
+
+6. Advantages of inheritance?
+7. Problems if you develop inheritance for fun?
+8. Why must we favour to HAS-A relation over IS-A relation?
+9. Sample program to show Problems if we donot develop inherinace;
+   problems and advantages if we develop inheritance?
+10. LC-RP architecture, how inheritance supports LC and RP(Dynamic Binding)?
+11. Project develop by using OO Programming elements, Encapsulation and Inheritance?
+===================================================================================
+
+1. What is an inheritance?
+	- Inheritnace is one of the OOP principles	
+
+	- It is a Parent-Child relation
+			  Parent 
+
+		Child1    Child2   Child3
+
+
+	- The process of creating a new class/object 
+	  deriving from an existing class/object 
+	  is called inheritance.
+	
+	- For example:  
+	  class A { }
+	  class B extends A{ } //here we are deriving 
+	                    //class B from class A
+		//then class B is called sub type of class A
+
+	- class A is called Super class or Parent class Or Base class
+	- clss B  is called Sub class or Child class or Derived class
+
+2. Why inheritance?
+	- for obtaining the type, properties and behaviors of 
+	  one class/object to another class/object
+	  to treat new classes as sub type of an existing classes
+	  we will develop inheritance
+	  
+	- For example  
+		- for creating Student as Person type
+		- for creating Lion    as Animal type
+		- for creating Bus     as Vehicle type
+	   we must develop inheritance
+	   
+	- As part of inherintace we will develop
+	  child classes or sub type classes of an 
+	  existing class or object.
+
+3. When must we develop inheritance?
+   we will develop inheritance in the below two situations
+	1. for extending or implementing existing class 
+	   functionality by adding new properties and 
+	   new behviours in new class as sub type
+	   we will develop inheritance.
+	   
+	   - For example:
+		class Person { String name;}
+		class Student extends Person{ String course;}
+		
+		- for adding more properties and behaviors to 
+		  Person we will extend Person class
+	  
+	2. for creating new multiple objects of same type
+	   as one group for achieving code reusability and
+	   loose coupling between sub type objects and user object
+	   we will develop inheritance.
+	   
+	     - For example: without inheritance
+		class Person { }	here all these 4 objects	
+		class Student { }	are individual objects	
+		class Faculty { }	not same type of objects
+		class Admin { }
+	   
+	     - with inheritance we can create Student, Faculty and Admin
+	       objects as same type of objects Person
+	     
+		class Person { }	
+		class Student extends Person{ }	
+		class Faculty extends Person{ }		
+		class Admin   extends Person{ }	
+
+4. How can we develop inheritance?
+	- by using the keywords
+		1. extends 
+		2. implements
+
+	- For deriving a class from an interface 
+	  we must use implements keyword
+	   for example:
+	   	interface Example { }
+		class Sample implements Example{ }
+
+	- For deriving a class from a class or 
+	  for deriving an interface from an interface
+	  we must use extends keyword
+	   for example:
+		class A { }
+		class B extends A { }
+
+		interface I1 { }
+		interface I2 extends I1 { }
+		class C implements I2 { }
+
+ 5. Sample program and execution flow
+	//Example.java 
+	class Example {
+	   static int a = 10;
+	   int x = 20;
+	}
+
+     //====================================================
+	//Sample.java 
+	class Sample {
+
+		public static void main(String[] args) {
+			Example e1 = new Example(); //HAS-A relation
+			System.out.println(e1.a);
+			System.out.println(e1.x);
+		}
+	}
+     //====================================================
+	//Sample.java
+	class Sample extends Example {	//IS-A relation
+                                  
+		public static void main(String[] args) {
+			Sample s1 = new Sample(); //accessing with IS-A relation
+			System.out.println(s1.a);
+			System.out.println(s1.x);
+		}
+	    
+	}
+
+6. Sample project on OOP Basics, Encapsulation and Inheritance 
+	- The main purpose of inheritance is 
+	  extending and reusing exising class/object 
+	  functionality as sub type 
+	  
+Inheritance and types of inheritance
+=======================================
+Q) Identify are below objects' classes creation correct or wrong design
+	class Student {}	wrong design
+
+	class Lion {}		wrong design
+
+	class HDFCBank {}	wrong design
+
+	class Rectangle {}	wrong design
+
+	class Airtel {}		wrong design
+
+becuase all above objects are not main or individual objects
+the above all objects are sub types of other main or individual objects
+so we must create above classes as sub type but not as individual objects 
+//====================================================================
+
+below code shows creating above objects as sub types 
+by developing inheritance by using 'extends and implement' keywords
+	class Person { }
+	class Student extends Person{ }		//correct desing
+
+	interface Animal { }
+	class Lion implements Animal { }	//correct desing
+
+	class Bank { }
+	class HDFCBank extends Bank { }		//correct desing
+
+	interface Shape { }
+	class Rectangle implements Shape { }	//correct desing
+
+	interface Sim { }
+	class Airtel implements Sim { }		//correct desing
+//========================================================================
+
+Q) How many ways we can reusing existing class members in new class?
+A) in 2 ways	
+	1. by using HAS-A relation (Association)
+	2. by using IS-A relation (Inheritance)
+
+	- HAS-A relation means 
+		creating existing class object in new class
+		and accessing members by using the existing class object
+	
+	- IS-A relation	means
+		creating new class deriving from an existing class
+		and accessing existing class members by using this new class object
+
+- Below code explains access Person class members in Student class for Person object
+  with HAS-A relation( Person class members are not executing for Student object)
+
+	class Person {
+		Sting name;
+
+		void eat() {
+			System.out.println(name + " is eating");
+		}
+	}
+//=====================================================================
+
+	class Student {  
+		public static void main(String[] args) {
+		  //=== HAS-A === realation wise reusing
+			Person p1 = new Person();//Student class is reusing
+			p1.name = "Hari";	//Person class and its memebers
+			p1.eat();		//for perform operation for Person
+		}
+	}
+	//with HAS-A relation we are reusing 
+	//Person and its members for Person but not student
+
+	//for using Person members for Student, 
+	//we must develop IS-A realtion(Inheritance)
+
+	//By developing inheritance we are 
+	//'extending and reusing' existing class members
+	//for new class object as if those existing members
+	//available in this new class
+//=====================================================================
+
+	class Student extends Person { //extending Person to use as Student
+
+		public static void main(String[] args) {
+		  //reusing with IS-A relation	
+			Student s1 = new Student();	
+			s1.name = "hari";	//we are accessing and reusing
+			s1.eat();		//existing class Person members
+						//as if those are own members of 
+		}				//Student object 
+	}
+
+
+	//Inheritance is meant for 'extending + resuing'
+//=====================================================================
+
+//Q) Can we store one class object in another class type referenced variable?
+//A) If this object's class is SUB CLASS, we can store
+
+//Identify CE in the below program?
+
+	class Animal { }
+	class Lion { }
+
+	class Test {
+	   public static void main(String[] args) {
+
+		Animal a1 = new Animal();	//allowed, same type
+		Lion   l1 = new Lion();		//allowed, same type
+
+		//Animal a2 = new Lion();	//not allowed, not IS-A relation
+		Person p1 = new Student();	//allowd, Student IS-A Person type
+
+	   }
+	}
+
+//when we develop inheritance, 
+	the new type object/class obtains the existing object/class 
+	  'type, properites and behaviors' and 
+	this new object is considered as
+	existing class object type.
+
+//hence we can stored the sub type object
+	//1. either in its own type referenced variable
+	//2. or     in its super type referenced variable
+
+	Student s1 = new Student(); //same type referenced variable, allowed
+	Person  p1 = new Student(); //super type referenced variable, allowed
+
+//but we can not store Super class object in sub class type variable	
+	Student s2 = new Person(); //not allowed, 
+			//sub type refernced variable with super type object
+
+//concusion: 
+ - The object type class(RIGHT side class) 
+    must be same or sub type class of variable type class(LEFT side)
+
+	A a1  = new B();
+
+	class B must be sub class of class A
+	else we will get CE: incompatible types
+
+==========================================================================
+Complete program on Inheritance
+==========================================================================
+//Person.java
+class Person {
+	String name;
+
+	void eat(){
+		System.out.println(name + " is eating");
+	}
+	void sleep() {
+		System.out.println(name + " is deep sleeping");
+	}
+}
+
+//Student.java
+class Student extends Person {
+	int sno;	 //extending		
+	String course;
+
+	void listen() {		  //reusing Person class members in Student
+	    System.out.println(name + " is listening "+ course);
+	}			//as if it is Student class member
+
+	void reply() {
+	    System.out.println(name + " is replying to "+ course + " questions");
+	}
+
+	void write() {
+	    System.out.println(name + " is writing "+ course + " notes");
+	}
+
+	void read() {
+	    System.out.println(name + " is reading "+ course + " notes");
+	}
+}	  

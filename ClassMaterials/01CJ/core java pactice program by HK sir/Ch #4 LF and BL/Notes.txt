@@ -1,0 +1,111 @@
+Ch #4: Language Fundamentals and Building logic
+===============================================
+01. What is software or a project, why project?
+02. What is meaning of manual operation and automation?
+03. What are the advantage of automation over manual operation?
+04. What is a programming Lanauge and Why programming langauge?
+05. What is a program and Why a program?
+06. What are the different activities we perform as part one operation?
+07. What are the programming concepts to perform above activties of an operation?
+08. What is langauage fundamentals, how many fundamentals Java supports?
+09. Steps to build a logic to perform one opertion?
+10. Sampe program to perform addition operation by the computer?    
+==================================================================
+01. What is software or a project, why project?
+	- A collection of programs as one group is called a software or a project 
+	
+	- A project is used for performing business operations 
+	  by a computer in an automated way 
+
+02. What is the meaning of manual operation and automation operation?
+	- Performing mathematical calculation by a human and 
+	  storing data in a books by a human is called manual operation 
+
+	- Performing mathematical calculations by a computer and 
+	  storing data in the computer by a software 
+	  is called automation operation 
+
+03. What are the advantages of automation?
+	1. A business can run 24/7 365 days without holidays
+	2. We can have good relation with the customer , 
+	   because software will not scold customer  
+	3. We can get secured, accurate and fast transactions    
+	4. We can always have safe data backup
+   
+    For example:
+       - Compare Bank application, mobile recharge application,
+         Movie, Bus and train ticket booking application,
+	 buying vegetables from supermarket and from roadside shop, 
+	 without software and with software automation.
+	 
+04. What is a programming Lanaguage and why PL?
+     - A programming language is a communication media between 
+       a programmer and a computer. By using a programming language 
+       a programmer writes a program, gives it to the computer 
+       to perform one operation. 		
+
+     - A programming language provides 'syntaxes and a semantics' 
+       to develop a program to perform mathematical operations 
+       by using computer.
+       
+05. What is a program and Why a program?      
+     - A program is a sequence of statements 
+       placed as a one group with a proper name 
+       
+     - A program is used for instructing the computer 
+       to perform one operation.
+       
+     - This operation can be a mathematical operations 
+       like addition, subtraction, multiplication, etc...
+       
+     - or can be business object operations
+       like deposit, withdraw, bookTicket, rechargeMobile, applyForLoan, etc...
+
+06. What are the different activities we perform as part one operation?
+     - As part of every operation we will perform five of five activities 
+	1. Reading values and storing in the program 
+	2. Performing validations and calculations  
+	3. Controlling flow of execution  
+	4. Throwing exceptions, if a given values are wrong 
+	5. Printing output and error message 
+       
+07. What are the programming concepts to perform above activties?       
+       - In every Object-Oriented Programming Language 
+         We have below 5 concepts to perform above five activities 
+		1. Data types and variables 
+		2. Operators 
+		3. Control flow statements  
+		4. Exception handling statements 
+		5. Print statement 
+
+08. What are langauge fundamenals and what are those?
+	- A programming concept that is used for developing logic 
+	  to perform one operation is called language fundamental.
+	  
+	- The programming concepts data types, operators, CFSs, EHs
+	  are called language fundamentals
+	  
+	=====================================================================
+	 Language Fundamentals	  Purpose  
+	=====================================================================
+	 1. DTs and Vars	-> for storing data
+	 
+	 2. Operators		-> for performing Vals and Cals		
+	 
+	 3. CFS stmts		-> for controlling flow execution 
+				   for taking decision which block of 
+				   statements must execute and must not execute
+				   
+	 4. EH Stmts		-> for throwing exceptions with an error message 	 			    
+	                           when wrong values are passed.
+	====================================================================
+	
+09. Steps to build a logic to perform one opertion?	
+	- Every operation logic development comes under 4 steps 
+	
+		refere diagram
+		
+10. Develop a program to perform addition operation 
+   by following above 5 steps
+   
+   refer diagram

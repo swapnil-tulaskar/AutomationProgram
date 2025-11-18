@@ -1,0 +1,12 @@
+<Html>
+<head>
+       <title>frames</title>
+	   <frameset cols="30%,30%,30%">
+	   <frame src="TANDJ.html"></frame>
+	   <frame src="TR.html"></frame>
+	   <frame src="Hyper links.html"></frame>
+	   <frame src="TR.html"></frame>
+	   </frameset>
+
+</head>
+</Html>

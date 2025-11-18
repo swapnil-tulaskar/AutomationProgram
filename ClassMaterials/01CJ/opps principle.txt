@@ -1,0 +1,22 @@
+what is an abstracttion ?
+ans. its an object design principle.
+what are oops pillers?
+there are four oops pillers(at pipe)
+abstraction
+polymorphism
+inheretance
+encapsulation
+
+if we dont implement these oop principle is there any problem?
+yes project is not secured, exetensable and can not scalable for example we dont buy jio but we buy other mobile
+because jio mobile is not exxensable it does not use other sim it use only jio sim.
+jio softwere doesnt implement oops principle hense move sense in the market 
+jio is moble object
+obpl - object based programing language
+=============================================================================================================================
+
+Day19.10.2024
+where have used method overloading in Freame work?
+while creating webdriver utility of handling DropDrown.
+
+

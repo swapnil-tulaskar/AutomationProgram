@@ -1,0 +1,257 @@
+<Html>
+       <Head>
+                <Title> World-List of Countries </Title>
+
+        </Head>
+		<Body>
+		 <Form Name = "Form1" Method = "" Action "">
+		    <Select id = "Dropdown" size = "250" multiple>
+<option> China
+<option> India
+<option> United States
+<option> Indonesia
+<option> Brazil
+<option> Pakistan
+<option> Nigeria
+<option> Bangladesh
+<option> Russia
+<option> Japan
+<option> Mexico
+<option> Philippines
+<option> Vietnam
+<option> Ethiopia
+<option> Egypt
+<option> Germany
+<option> Iran
+<option> Turkey
+<option> Democratic Republic of the Congo
+<option> Thailand
+<option> France
+<option> United Kingdom
+<option> Italy
+<option> Burma
+<option> South Africa
+<option> South Korea
+<option> Colombia
+<option> Spain
+<option> Ukraine
+<option> Tanzania
+<option> Kenya
+<option> Argentina
+<option> Algeria
+<option> Poland
+<option> Sudan
+<option> Uganda
+<option> Canada
+<option> Iraq
+<option> Morocco
+<option> Peru
+<option> Uzbekistan
+<option> Saudi Arabia
+<option> Malaysia
+<option> Venezuela
+<option> Nepal
+<option> Afghanistan
+<option> Yemen
+<option> North Korea
+<option> Ghana
+<option> Mozambique
+<option> Taiwan
+<option> Australia
+<option> Ivory Coast
+<option> Syria
+<option> Madagascar
+<option> Angola
+<option> Cameroon
+<option> Sri Lanka
+<option> Romania
+<option> Burkina Faso
+<option> Niger
+<option> Kazakhstan
+<option> Netherlands
+<option> Chile
+<option> Malawi
+<option> Ecuador
+<option> Guatemala
+<option> Mali
+<option> Cambodia
+<option> Senegal
+<option> Zambia
+<option> Zimbabwe
+<option> Chad
+<option> South Sudan
+<option> Belgium
+<option> Cuba
+<option> Tunisia
+<option> Guinea
+<option> Greece
+<option> Portugal
+<option> Rwanda
+<option> Czech Republic
+<option> Somalia
+<option> Haiti
+<option> Benin
+<option> Burundi
+<option> Bolivia
+<option> Hungary
+<option> Sweden
+<option> Belarus
+<option> Dominican Republic
+<option> Azerbaijan
+<option> Honduras
+<option> Austria
+<option> United Arab Emirates
+<option> Israel
+<option> Switzerland
+<option> Tajikistan
+<option> Bulgaria
+<option> Hong Kong (China)
+<option> Serbia
+<option> Papua New Guinea
+<option> Paraguay
+<option> Laos
+<option> Jordan
+<option> El Salvador
+<option> Eritrea
+<option> Libya
+<option> Togo
+<option> Sierra Leone
+<option> Nicaragua
+<option> Kyrgyzstan
+<option> Denmark
+<option> Finland
+<option> Slovakia
+<option> Singapore
+<option> Turkmenistan
+<option> Norway
+<option> Lebanon
+<option> Costa Rica
+<option> Central African Republic
+<option> Ireland
+<option> Georgia
+<option> New Zealand
+<option> Republic of the Congo
+<option> Palestine
+<option> Liberia
+<option> Croatia
+<option> Oman
+<option> Bosnia and Herzegovina
+<option> Puerto Rico
+<option> Kuwait
+<option> Moldov
+<option> Mauritania
+<option> Panama
+<option> Uruguay
+<option> Armenia
+<option> Lithuania
+<option> Albania
+<option> Mongolia
+<option> Jamaica
+<option> Namibia
+<option> Lesotho
+<option> Qatar
+<option> Macedonia
+<option> Slovenia
+<option> Botswana
+<option> Latvia
+<option> Gambia
+<option> Kosovo
+<option> Guinea-Bissau
+<option> Gabon
+<option> Equatorial Guinea
+<option> Trinidad and Tobago
+<option> Estonia
+<option> Mauritius
+<option> Swaziland
+<option> Bahrain
+<option> Timor-Leste
+<option> Djibouti
+<option> Cyprus
+<option> Fiji
+<option> Reunion (France)
+<option> Guyana
+<option> Comoros
+<option> Bhutan
+<option> Montenegro
+<option> Macau (China)
+<option> Solomon Islands
+<option> Western Sahara
+<option> Luxembourg
+<option> Suriname
+<option> Cape Verde
+<option> Malta
+<option> Guadeloupe (France)
+<option> Martinique (France)
+<option> Brunei
+<option> Bahamas
+<option> Iceland
+<option> Maldives
+<option> Belize
+<option> Barbados
+<option> French Polynesia (France)
+<option> Vanuatu
+<option> New Caledonia (France)
+<option> French Guiana (France)
+<option> Mayotte (France)
+<option> Samoa
+<option> Sao Tom and Principe
+<option> Saint Lucia
+<option> Guam (USA)
+<option> Curacao (Netherlands)
+<option> Saint Vincent and the Grenadines
+<option> Kiribati
+<option> United States Virgin Islands (USA)
+<option> Grenada
+<option> Tonga
+<option> Aruba (Netherlands)
+<option> Federated States of Micronesia
+<option> Jersey (UK)
+<option> Seychelles
+<option> Antigua and Barbuda
+<option> Isle of Man (UK)
+<option> Andorra
+<option> Dominica
+<option> Bermuda (UK)
+<option> Guernsey (UK)
+<option> Greenland (Denmark)
+<option> Marshall Islands
+<option> American Samoa (USA)
+<option> Cayman Islands (UK)
+<option> Saint Kitts and Nevis
+<option> Northern Mariana Islands (USA)
+<option> Faroe Islands (Denmark)
+<option> Sint Maarten (Netherlands)
+<option> Saint Martin (France)
+<option> Liechtenstein
+<option> Monaco
+<option> San Marino
+<option> Turks and Caicos Islands (UK)
+<option> Gibraltar (UK)
+<option> British Virgin Islands (UK)
+<option> Aland Islands (Finland)
+<option> Caribbean Netherlands (Netherlands)
+<option> Palau
+<option> Cook Islands (NZ)
+<option> Anguilla (UK)
+<option> Wallis and Futuna (France)
+<option> Tuvalu
+<option> Nauru
+<option> Saint Barthelemy (France)
+<option> Saint Pierre and Miquelon (France)
+<option> Montserrat (UK)
+<option> Saint Helena, Ascension and Tristan da Cunha (UK)
+<option> Svalbard and Jan Mayen (Norway)
+<option> Falkland Islands (UK)
+<option> Norfolk Island (Australia)
+<option> Christmas Island (Australia)
+<option> Niue (NZ)
+<option> Tokelau (NZ)
+<option> Vatican City
+<option> Cocos (Keeling) Islands (Australia)
+<option> Pitcairn Islands (UK)
+
+			</Select>
+
+
+
+</Html>

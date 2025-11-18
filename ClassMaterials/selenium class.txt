@@ -1,0 +1,329 @@
+Using Frame work:-> framework produce beneficial out comes for user is it saparates code 
+and test data from each other and it we want to make any change in the data it dont disturb the script 
+1.due to fw uniformity reflects among all employee
+2.it helps for code reusiblity 
+3.it helps for code optimization
+========================================================================================================
+
+Q. how to create hybride framework?
+=> we have to crate moven project 
+moven project => hybrid Frame work 
+Data driven frame => .property=> fis => testng     => TestNG=> baseclass=>Generic utilities=> extent report
+		  => exl=> apache poi=> annotation => TestNG=> baseclass=>Generic utilities=> extent report
+answer is 
+ go to eclipse => file (top most left corner ) => new project => moven project=> next
+ => simple moven project => next
+artifect id  =>hybrid fw
+group id => hybrid fw => n=> finished
+=======================================================================================================
+Generic Utility-> Pacackage 
+in Package of Generic Utility we create below class
+->PropertyfileUtility
+->ExcelfileUtility
+->IconstanstUtility
+->webDriverUtility
+->Javautility
+->BaseClass
+=========================================================================================================
+property file			iconstant Utiltiy	webDriverUlitility
+							
+							pom class project repos		test class 
+
+Excel file utility		java utility		Base class
+
+=========================================================================================================
+Q) what is diffrent between simple project vs moven project?
+
+Simple:- 
+1)we can add jars not dependancy.
+2)if any version are updated we have to add jars again
+moven:-
+1)we can add dependency
+2)if any version are updated then simple update moven project
+=========================================================================================================
+
+Hybrid Framework
+================
+framework:- it is code structure which mekes code maintainance easy and efficient using framework the user can 
+	    get beneficial outcome i.e. 
+	    1) code revesiblity:- write once use many times
+	    2) code maintainance:- folder sise code writen
+	    3) code optimization:- it reduces length of code
+=========================================================================================================	    
+In our organization we have implemented hybride framework
+that which include 
+1)TestNg
+2)maven skalton framework
+3)DDF(Data Driven Framework)
+4)PAGE object model
+5)Hybrid Framework
+
+1) TestNg:-
+================
+using testng we can perform so many function that is 
+1.1 we can generate report index html email lable
+extent reports etc 
+by looking toword report we come to know how many tc's has  been panel and how many are fail.
+1.2 parallalexecution batch execution group execution 
+1.3 regration suitecration
+1.4 prioritizing tc's
+1.5 testNG flags,imeout,invocation 
+1.6 running only failed the ts's using failed.xml file
+1.7 including and excluding tc's 
+1.8 implementaton of all annotation 
+=========================================================================================================
+Mavan Framework
+================
+using mavan frame work we have segrigated / separated the code folder wise so that 
+the code efficiency will be incresed and there is very less possibilty to merge the code.
+even code optimization is possible using moven fm.
+In mavan we can add all the dependency which are useful for project.
+=========================================================================================================
+DDF
+================
+using DDF we can separate tc and test data from each other we can maintain testdata 
+in external resource (excel sheet) and fatch it in script with the help of 3rd party tool.
+
+=========================================================================================================
+POM classes
+===========
+using POM classes we can elliminate stale element referance exception (explain stale element r exception)
+=========================================================================================================
+Hybrid FW:-
+
+					generic util			iconstant Util		property file util
+							
+	 test class	base class              		 
+
+					object repos poms		java utility		Excel file utility
+	
+=========================================================================================================
+API:- Application programming Interface (most imp)
+=================================================
+API:- IT is inbetween system which makes and help to make communication between 2 system is called as API.
+	1) if communication is done using internet -> webservices
+	2) if communication is not done using internet -> "API"
+					OR
+(it is the layer through we can sharing the feature without sharing source code is called as API)
+Google map sharing the feature but not source code.
+=========================================================================================================
+Webservice:- any service that can be given to end user's through internet is called webservice.
+ex. zomato, swiggy, amazon flipkart, myntra, mmt, goibbo, book my shows
+
+API:- Ex.  JDBC (java ----- DB)
+	   JSON wire protocall  (java------ selenium)
+	   w3c protocal (java------ selenium)
+========================================================
+All Webservices are API but All API are not webservives 
+========================================================
+=========================================================================================================
+
+Idea about API:-
+=========================================================================================================
+
+mr A zoomato                                             mr B mess
+doing online food delivery				doing offline buisness for ex:- mess
+=========================================================================================================
+
+MR A AND mr b both are friends 
+mr A has develop software and he is doing business in online mode 
+but mr B is poor, he dont have money to create his own applicaion from scratch.
+one day mr B reaches approaches mr A and asking about online buisness, 
+I am not getting that musch profit in offline mode or consider
+pandemic situation come an everyone  ordering food online itself. 
+like this mr B is asking about online buisness.
+since they are very close friends mr a will share source code to mr B,
+mr B alter/modify the code in his own way 
+and added some new feature and created beautiful application them zomato so that
+everyone is using swigy in online mode rather then zomato because of its feature.
+so that swiggy becomes popular and zomato went in loss.
+
+=========================================================================================================
+
+Q. why zomato went in loss??
+-> because of sharing the source code.
+
+then after few days zomato owner realize that boss i have done mistake  unneccesorly 
+I sent source code i should have to send only functionality feature 
+ without sharing source code.
+ 
+API weservice:- the process in whice only functionality feature is shared 
+
+
+=========================================================================================================
+
+
+Testing 
+1) UI 
+	1.1 manual 
+	1.2 automation
+2) backend testing
+	2.1 manual API
+		POSTMAN
+	2.2 automaion API
+		RESTASSURED
+=========================================================================================================
+
+URL/Links:-> 
+
+Base url + end point
+
+=========================================================================================================
+reqres:-
+
+1) HTTP request:-
+
+what is HTTP ?
+hyper text transfer protocal.
+
+2) what is protocal?
+ans:- browser to server communicate can be done with the help of protocal
+there are some type of protocal
+http:- hyper text transfer protocal
+https:- hyper text transfer protocal secured
+ftp:- file transfer protocal
+smtp:- simple mail transfer protocol
+
+
+
+             laptop                                                        amazon
+
+                                 ------>--->----http request ---->----->---
+https://www.amazon.com -> browser                                          server
+                                 ------<---<----http Responce ----<-----<---
+========================================================
+				 
+protocal:||domainName:port number/ resorcepath ? query string # fragment id								 
+========================================================
+				 
+1) what is protocal?
+it provide sort of rules
+there are some type of protocal
+http:- hyper text transfer protocal
+https:- hyper text transfer protocal secured
+ftp:- file transfer protocal
+smtp:- simple mail transfer protocol				 
+				 
+========================================================
+				 
+2)Domain Name:-
+it is company Name comp id address
+.com :- commercial
+.org :- organization
+.edu :- education
+.in  :- institutional
+.gov :- governmet
+or local host
+========================================================
+
+3) port Number :- 
+it gives the path of application
+
+[spacific port no. defines specific application]
+ex. localhost8888 -> vtiger -> localhost8080-> jenkins
+========================================================
+
+4) Resorcepath
+path to access the feature
+ex. gmail app
+inbox start with "/"
+========================================================
+
+5) Querystring:- 
+10 it start s with ?
+2) it is encrypted [ it is not in readable format]
+3) it is in key value format
+key = value
+4) it is search or fileriteris
+========================================================
+
+6) Fragment ID:-
+one portion of application we can see using ffragment ID 
+ex: we can see only inbox 
+https// mail.google.com # inbox
+========================================================
+
+TDD :-
+TestNG DDF, POM MOVEN 
+BDD :- Behaviour driven Devlopement
+
+1) Givan:- precondition
+2) when:
+3) And
+4) then 
+
+Create 1 moven project -> file new project moven project->select moven checkpost
+-> group id BDD CUCUMBER
+-> BDD CUCUMBER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+class Test01_LiteralAndItsRules{
+	public static void main(String[] args){
+	     
+	
+	}
+	
+}	
