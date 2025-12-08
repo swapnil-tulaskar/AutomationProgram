@@ -40,6 +40,11 @@ public class MainPage {
 		return driver.findElement(logo).getText();
     	
     }
+    
+    public boolean isLogoVisible() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(logo)).isDisplayed();
+    }
+    
     public void clickLogo() {
         waitAndClick(logo);
         
