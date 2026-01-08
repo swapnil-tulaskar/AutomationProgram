@@ -21,9 +21,6 @@ public class DeleteUserTest extends BaseTest{
 	home.clickSignUpSignInLogin();
 	login.signInEntry("swapniltulaskar1@gmail.com","12345");
 	home.clickDeleteUser();
-	
-	
-	
 	}
 
 }

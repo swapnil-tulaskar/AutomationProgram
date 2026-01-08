@@ -17,7 +17,7 @@ public class LoginPage {
 	By loginPassword= By.xpath("//input[@placeholder='Password']");
 	By Loginbtn = By.xpath("//button[normalize-space()='Login']");
 	By AccountWarning = By.xpath("//p[normalize-space()='Your email or password is incorrect!']");
-	
+	By AlreadyRegWaring = By.xpath("//p[normalize-space()='Email Address already exist!']");
 	
 	
 	public LoginPage(WebDriver driver) {
@@ -36,14 +36,24 @@ public class LoginPage {
 		driver.findElement(loginPassword).sendKeys(password);
 		driver.findElement(Loginbtn).click();
 	}
-	
-	public String getEmailPasswordIncorrectWaring() {
+	// For Incorrect Email/Password Warning 
+	public String getEmailPasswordIncorrectWarning() {
 		return driver.findElement(AccountWarning).getText();
 	}
 	
-	public boolean isEmailPasswordIncorrectWaringDisplay() {
+	public boolean isEmailPasswordIncorrectWarningDisplay() {
 		return driver.findElement(AccountWarning).isDisplayed();
 	}
+	
+	// For Already Register Warning 
+	public String getEmailAlreadyRegisterWarning() {
+		return driver.findElement(AlreadyRegWaring).getText();
+	}
+	
+	public boolean isEmailidAlreadyRegisterWaring() {
+		return driver.findElement(AlreadyRegWaring).isDisplayed();
+	}
+	
 	
 
 }

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-08T12:20:18 IST" name="Default suite" finished-at="2026-01-08T12:20:31 IST" duration-ms="13461">
+  <suite started-at="2026-01-08T13:40:06 IST" name="Default suite" finished-at="2026-01-08T13:40:15 IST" duration-ms="8630">
     <groups>
     </groups>
-    <test started-at="2026-01-08T12:20:18 IST" name="Default test" finished-at="2026-01-08T12:20:31 IST" duration-ms="13461">
-      <class name="tests.EmailPasswordMailIncorrectWarningTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.EmailPasswordMailIncorrectWarningTest@4e08711f]" started-at="2026-01-08T12:20:18 IST" name="setup" finished-at="2026-01-08T12:20:26 IST" duration-ms="8758" status="PASS">
+    <test started-at="2026-01-08T13:40:06 IST" name="Default test" finished-at="2026-01-08T13:40:15 IST" duration-ms="8630">
+      <class name="tests.CheckRegrassionTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.CheckRegrassionTest@4e08711f]" started-at="2026-01-08T13:40:06 IST" name="setup" finished-at="2026-01-08T13:40:15 IST" duration-ms="8243" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="shouldShowWarningForemailPasswordIncorrect()[pri:0, instance:tests.EmailPasswordMailIncorrectWarningTest@4e08711f]" started-at="2026-01-08T12:20:26 IST" name="shouldShowWarningForemailPasswordIncorrect" finished-at="2026-01-08T12:20:31 IST" duration-ms="4475" status="PASS">
+        <test-method signature="CheckRegrationTest()[pri:1, instance:tests.CheckRegrassionTest@4e08711f]" started-at="2026-01-08T13:40:15 IST" name="CheckRegrationTest" finished-at="2026-01-08T13:40:15 IST" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- shouldShowWarningForemailPasswordIncorrect -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.EmailPasswordMailIncorrectWarningTest@4e08711f]" started-at="2026-01-08T12:20:31 IST" name="tearDown" finished-at="2026-01-08T12:20:31 IST" duration-ms="192" status="PASS">
+        </test-method> <!-- CheckRegrationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CheckRegrassionTest@4e08711f]" started-at="2026-01-08T13:40:15 IST" name="tearDown" finished-at="2026-01-08T13:40:15 IST" duration-ms="291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.EmailPasswordMailIncorrectWarningTest -->
+      </class> <!-- tests.CheckRegrassionTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

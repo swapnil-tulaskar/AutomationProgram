@@ -19,7 +19,5 @@ public class RegisterUserTest extends BaseTest{
 	login.signUpEntry("Swapnil1","swapniltulaskar1@gmail.com");
 	signup.fillAccDeatails();
 	System.out.println();
-	
 	}
- 
 }

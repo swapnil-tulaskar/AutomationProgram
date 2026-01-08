@@ -1,6 +1,5 @@
 package tests;
 
-import java.sql.Driver;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -20,14 +19,11 @@ public class EmailPasswordMailIncorrectWarningTest extends BaseTest {
 		home.clickSignUpSignInLogin();
 		login.signInEntry("tulaskarswapnil1@gmail.com","12345");
 		Assert.assertEquals(
-				login.getEmailPasswordIncorrectWaring(),
+				login.getEmailPasswordIncorrectWarning(),
 			    "Your email or password is incorrect!"
 			);
 		Assert.assertTrue(
-				login.isEmailPasswordIncorrectWaringDisplay(),
-				"Your email or password is incorrect!");
-		
+				login.isEmailPasswordIncorrectWarningDisplay(),
+				"Email/password incorrect warning message is not displayed.");
 	}
-	
-
 }
