@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="herokuapp.basicOth">
+      <class name="farmRPG.fishingFunctionality">
         <methods>
-          <include name="close"/>
-          <include name="openChrome"/>
-          <include name="enterUsernamePwd"/>
+          <include name="catchFish"/>
         </methods>
-      </class> <!-- herokuapp.basicOth -->
+      </class> <!-- farmRPG.fishingFunctionality -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
