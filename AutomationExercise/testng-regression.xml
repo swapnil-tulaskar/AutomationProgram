@@ -1,0 +1,15 @@
+
+<suite name="Regression Suite" parallel="false">
+    <test name="Regression Tests">
+        <classes>
+            <class name="tests.DeleteAccountTest"/>
+            <class name="tests.RegisterUserTest"/>
+            <class name="tests.LogOutUserTest"/>
+            <class name="tests.EmailAlreadyRegisteredWarningTest"/>
+            <class name="tests.EmailPasswordMailIncorrectWarningTest"/>
+            
+        </classes>
+    </test>
+</suite>
+
+

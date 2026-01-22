@@ -10,22 +10,28 @@ public class HomePage {
 	private By signUpUser = By.xpath("//a[normalize-space()='Signup / Login']");
 	private By deleteUser = By.xpath("//a[normalize-space()='Delete Account']");
 	private By logOutUser = By.xpath("//a[normalize-space()='Logout']");
-	private By deleteAccountText = By.xpath("//b[normalize-space()='Account Deleted!']");
+	private By loggedInAsText = By.xpath("//a[contains(text(),'Logged in as')]");
 	
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
-	// for Method for SingUpUser
+	// Method for SingUpUser
 	public void clickSignUpSignInLogin() {driver.findElement(signUpUser).click();}
 	
-	// for Method for Delete User
+	// Method for Delete User
 	public void clickDeleteUser() { driver.findElement(deleteUser).click();}
 	
-	// for Method for LogOut User
+	// Method for LogOut User
 	public void clickLogOutUser() { driver.findElement(logOutUser).click();}
 	
-	
+	 // login state
+	    public boolean isUserLoggedIn() {
+	        return driver.findElement(loggedInAsText).isDisplayed();
+	    }
 
+	    public String getLoggedInAsText() {
+	        return driver.findElement(loggedInAsText).getText();
+	        }
 }

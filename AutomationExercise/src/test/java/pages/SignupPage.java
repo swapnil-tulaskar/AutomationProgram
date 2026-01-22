@@ -29,6 +29,7 @@ public class SignupPage {
     private By zip = By.id("zipcode");
     private By mobile = By.id("mobile_number");
     private By createAccountBtn = By.xpath("//button[normalize-space()='Create Account']");
+    private By accountCreatedMessage = By.xpath("//b[normalize-space()='Account Created!']");
     
 	public SignupPage(WebDriver driver) {
 		this.driver = driver;
@@ -58,8 +59,17 @@ public class SignupPage {
 	        driver.findElement(mobile).sendKeys("9999999999");
 
 	        driver.findElement(createAccountBtn).click();
-		
 	        
 	}
+	
+	public boolean isAccountCreatedMessage() {
+		return driver.findElement(accountCreatedMessage).isDisplayed();
+	}
+	
+	public String getAccountCreatedMessage() {
+		return driver.findElement(accountCreatedMessage).getText();
+	}
+	
+	
 
 }

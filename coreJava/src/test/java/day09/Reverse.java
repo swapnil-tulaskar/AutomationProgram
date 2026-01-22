@@ -25,5 +25,6 @@ public class Reverse {
 		System.out.println("<== this is Reverse of that input");
 		scn.close();
 	}
+
 	
 }

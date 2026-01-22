@@ -18,12 +18,15 @@ public class EmailPasswordMailIncorrectWarningTest extends BaseTest {
 		
 		home.clickSignUpSignInLogin();
 		login.signInEntry("tulaskarswapnil1@gmail.com","12345");
+		
+		Assert.assertTrue(
+				login.isEmailPasswordIncorrectWarningDisplay(),
+				"Email/password incorrect warning message is not displayed.");
+		
 		Assert.assertEquals(
 				login.getEmailPasswordIncorrectWarning(),
 			    "Your email or password is incorrect!"
 			);
-		Assert.assertTrue(
-				login.isEmailPasswordIncorrectWarningDisplay(),
-				"Email/password incorrect warning message is not displayed.");
+		
 	}
 }
