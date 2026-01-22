@@ -20,6 +20,7 @@ public class LoginPage {
 	By AlreadyRegWaring = By.xpath("//p[normalize-space()='Email Address already exist!']");
 	
 	
+	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -37,22 +38,32 @@ public class LoginPage {
 		driver.findElement(Loginbtn).click();
 	}
 	// For Incorrect Email/Password Warning 
-	public String getEmailPasswordIncorrectWarning() {
-		return driver.findElement(AccountWarning).getText();
-	}
-	
 	public boolean isEmailPasswordIncorrectWarningDisplay() {
 		return driver.findElement(AccountWarning).isDisplayed();
 	}
 	
+	public String getEmailPasswordIncorrectWarning() {
+		return driver.findElement(AccountWarning).getText();
+	}
+	
+	
 	// For Already Register Warning 
+	
+	public boolean isEmailidAlreadyRegisterWarning() {
+		return driver.findElement(AlreadyRegWaring).isDisplayed();
+	}
+	
 	public String getEmailAlreadyRegisterWarning() {
 		return driver.findElement(AlreadyRegWaring).getText();
 	}
 	
-	public boolean isEmailidAlreadyRegisterWaring() {
-		return driver.findElement(AlreadyRegWaring).isDisplayed();
-	}
+	
+	
+	
+	
+	
+	
+
 	
 	
 

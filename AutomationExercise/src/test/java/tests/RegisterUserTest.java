@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Base.BaseTest;
@@ -18,6 +19,14 @@ public class RegisterUserTest extends BaseTest{
 	home.clickSignUpSignInLogin();
 	login.signUpEntry("Swapnil1","swapniltulaskar1@gmail.com");
 	signup.fillAccDeatails();
-	System.out.println();
+	
+
+	Assert.assertTrue(signup.isAccountCreatedMessage(),
+			"Account Created Message Not Display"
+			);
+	
+	Assert.assertEquals(signup.getAccountCreatedMessage(),
+			"ACCOUNT CREATED!"
+			);
 	}
 }
