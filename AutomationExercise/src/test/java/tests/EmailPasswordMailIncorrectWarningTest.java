@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import Base.BaseTest;
 import pages.HomePage;
 import pages.LoginPage;
+import utils.ConfigReader;
 
 public class EmailPasswordMailIncorrectWarningTest extends BaseTest {
 	
@@ -17,14 +18,17 @@ public class EmailPasswordMailIncorrectWarningTest extends BaseTest {
 		LoginPage login = new LoginPage(driver);
 		
 		home.clickSignUpSignInLogin();
-		login.signInEntry("tulaskarswapnil1@gmail.com","12345");
+		login.signInEntry(
+				ConfigReader.getProperty("invalid_email"),
+				ConfigReader.getProperty("invalid_password")
+				);
 		
 		Assert.assertTrue(
-				login.isEmailPasswordIncorrectWarningDisplay(),
+				login.isIncorrectCredentialsWarningVisible(),
 				"Email/password incorrect warning message is not displayed.");
 		
 		Assert.assertEquals(
-				login.getEmailPasswordIncorrectWarning(),
+				login.getIncorrectCredentialsWarningText(),
 			    "Your email or password is incorrect!"
 			);
 		

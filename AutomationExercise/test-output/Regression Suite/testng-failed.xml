@@ -3,41 +3,13 @@
 <suite name="Failed suite [Regression Suite]">
   <test thread-count="5" name="Regression Tests(failed)">
     <classes>
-      <class name="tests.EmailPasswordMailIncorrectWarningTest">
+      <class name="tests.ProductPageTest">
         <methods>
-          <include name="shouldShowWarningForemailPasswordIncorrect"/>
+          <include name="verifyProductsAreDisplayed"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- tests.EmailPasswordMailIncorrectWarningTest -->
-      <class name="tests.RegisterUserTest">
-        <methods>
-          <include name="usertest"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- tests.RegisterUserTest -->
-      <class name="tests.EmailAlreadyRegisteredWarningTest">
-        <methods>
-          <include name="checkEmailIdAlreadyRegisterWarning"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- tests.EmailAlreadyRegisteredWarningTest -->
-      <class name="tests.LogOutUserTest">
-        <methods>
-          <include name="LogOutUser"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- tests.LogOutUserTest -->
-      <class name="tests.DeleteAccountTest">
-        <methods>
-          <include name="DeletUser"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- tests.DeleteAccountTest -->
+      </class> <!-- tests.ProductPageTest -->
     </classes>
   </test> <!-- Regression Tests(failed) -->
 </suite> <!-- Failed suite [Regression Suite] -->

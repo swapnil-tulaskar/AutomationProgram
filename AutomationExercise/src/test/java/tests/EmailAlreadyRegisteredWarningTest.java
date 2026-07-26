@@ -3,11 +3,12 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Base.BaseTest;
+import Base.*;
 import pages.HomePage;
 import pages.LoginPage;
+import utils.ConfigReader;
 
-public class EmailAlreadyRegisteredWarningTest extends BaseTest {
+public class EmailAlreadyRegisteredWarningTest extends BaseTest{
 	
 	
 	@Test
@@ -17,14 +18,14 @@ public class EmailAlreadyRegisteredWarningTest extends BaseTest {
 	
 	
 	home.clickSignUpSignInLogin();
-	login.signUpEntry("Swapnil1","swapniltulaskar1@gmail.com");
+	login.signUpEntry(ConfigReader.getProperty("reg_name"),ConfigReader.getProperty("reg_email"));
 	
-	Assert.assertTrue(login.isEmailidAlreadyRegisterWarning(),
+	Assert.assertTrue(login.isAlreadyRegisteredWarningVisible(),
 			"Email Address already exist! not Displayed"
 			);
 	
 	Assert.assertEquals(
-			login.getEmailAlreadyRegisterWarning(),
+			login.getAlreadyRegisteredWarningText(),
 			"Email Address already exist!"
 			);
 	

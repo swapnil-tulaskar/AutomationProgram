@@ -11,6 +11,7 @@ public class HomePage {
 	private By deleteUser = By.xpath("//a[normalize-space()='Delete Account']");
 	private By logOutUser = By.xpath("//a[normalize-space()='Logout']");
 	private By loggedInAsText = By.xpath("//a[contains(text(),'Logged in as')]");
+	private By  ContactUsForm = By.xpath("//a[normalize-space()='Contact us']");
 	
 	
 	public HomePage(WebDriver driver) {
@@ -25,6 +26,9 @@ public class HomePage {
 	
 	// Method for LogOut User
 	public void clickLogOutUser() { driver.findElement(logOutUser).click();}
+	
+	//Method for  Contact Us Form 
+	public void clickContactUsForm() {driver.findElement(ContactUsForm).click();}
 	
 	 // login state
 	    public boolean isUserLoggedIn() {

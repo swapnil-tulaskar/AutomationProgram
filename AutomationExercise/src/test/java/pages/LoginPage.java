@@ -2,69 +2,88 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class LoginPage {
-	
-	WebDriver driver;
-	
-	By newUserText = By.xpath("//h2[normalize-space()='New User Signup!']");
-	By username = By.xpath("//input[@placeholder='Name']");
-	By signUpEmailAddress = By.xpath("//input[@data-qa='signup-email']");
-	By  SignUpbtn = By.xpath("//button[normalize-space()='Signup']");
-	
-	By loginEmailAddress = By.xpath("//input[@data-qa='login-email']");
-	By loginPassword= By.xpath("//input[@placeholder='Password']");
-	By Loginbtn = By.xpath("//button[normalize-space()='Login']");
-	By AccountWarning = By.xpath("//p[normalize-space()='Your email or password is incorrect!']");
-	By AlreadyRegWaring = By.xpath("//p[normalize-space()='Email Address already exist!']");
-	
-	
-	
-	public LoginPage(WebDriver driver) {
-		this.driver = driver;
-	}
-	
-	public void signUpEntry(String name, String email) {
-		driver.findElement(username).sendKeys(name);
-		driver.findElement(signUpEmailAddress).sendKeys(email);
-		driver.findElement(SignUpbtn).click();
-	}
-	
-	
-	public void signInEntry(String email, String password) {
-		driver.findElement(loginEmailAddress).sendKeys(email);
-		driver.findElement(loginPassword).sendKeys(password);
-		driver.findElement(Loginbtn).click();
-	}
-	// For Incorrect Email/Password Warning 
-	public boolean isEmailPasswordIncorrectWarningDisplay() {
-		return driver.findElement(AccountWarning).isDisplayed();
-	}
-	
-	public String getEmailPasswordIncorrectWarning() {
-		return driver.findElement(AccountWarning).getText();
-	}
-	
-	
-	// For Already Register Warning 
-	
-	public boolean isEmailidAlreadyRegisterWarning() {
-		return driver.findElement(AlreadyRegWaring).isDisplayed();
-	}
-	
-	public String getEmailAlreadyRegisterWarning() {
-		return driver.findElement(AlreadyRegWaring).getText();
-	}
-	
-	
-	
-	
-	
-	
-	
 
-	
-	
+    private WebDriver driver;
 
+    // Signup section
+    private By newUserSignupText =
+            By.xpath("//h2[normalize-space()='New User Signup!']");
+    private By signupNameInput =
+            By.xpath("//input[@placeholder='Name']");
+    private By signupEmailInput =
+            By.xpath("//input[@data-qa='signup-email']");
+    private By signupButton =
+            By.xpath("//button[normalize-space()='Signup']");
+
+    // Login section
+    private By loginEmailInput =
+            By.xpath("//input[@data-qa='login-email']");
+    private By loginPasswordInput =
+            By.xpath("//input[@placeholder='Password']");
+    private By loginButton =
+            By.xpath("//button[normalize-space()='Login']");
+
+    // Warnings & validation
+    private By incorrectCredentialsWarning =
+            By.xpath("//p[normalize-space()='Your email or password is incorrect!']");
+    private By alreadyRegisteredWarning =
+            By.xpath("//p[normalize-space()='Email Address already exist!']");
+    private By loggedInUserText =
+            By.xpath("//li//a[contains(text(),'Logged in as')]");
+
+    // Login page verification
+    private By loginPageHeading =
+            By.xpath("//h2[normalize-space()='Login to your account']");
+
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    // Signup action
+    public void signUpEntry(String name, String email) {
+        driver.findElement(signupNameInput).sendKeys(name);
+        driver.findElement(signupEmailInput).sendKeys(email);
+        driver.findElement(signupButton).click();
+    }
+
+    // Login action
+    public void signInEntry(String email, String password) {
+        driver.findElement(loginEmailInput).sendKeys(email);
+        driver.findElement(loginPasswordInput).sendKeys(password);
+        driver.findElement(loginButton).click();
+    }
+
+    // Validation: incorrect login
+    public boolean isIncorrectCredentialsWarningVisible() {
+        return driver.findElement(incorrectCredentialsWarning).isDisplayed();
+    }
+
+    public String getIncorrectCredentialsWarningText() {
+        return driver.findElement(incorrectCredentialsWarning).getText();
+    }
+
+    // Validation: already registered email
+    public boolean isAlreadyRegisteredWarningVisible() {
+        return driver.findElement(alreadyRegisteredWarning).isDisplayed();
+    }
+
+    public String getAlreadyRegisteredWarningText() {
+        return driver.findElement(alreadyRegisteredWarning).getText();
+    }
+
+    // Validation: logged-in user
+    public boolean isLoggedInUserVisible() {
+        return driver.findElement(loggedInUserText).isDisplayed();
+    }
+
+    public String getLoggedInUserText() {
+        return driver.findElement(loggedInUserText).getText();
+    }
+
+    // Validation: login page (used after logout)
+    public boolean isLoginFormVisible() {
+        return driver.findElement(loginPageHeading).isDisplayed();
+    }
 }
